@@ -1,6 +1,6 @@
 import React from 'react';
 
-const InstrumentMenu = ({instrumentList}) => {
+const InstrumentMenu = ({instrumentList, onClick}) => {
     
     return (
         <div id='instrument-menu'>
