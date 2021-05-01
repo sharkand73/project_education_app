@@ -1,18 +1,25 @@
 import React from 'react';
 
+
+
 const InstrumentMenu = ({instrumentList, onClick}) => {
-    
+
+    // const onClick = (event) => {
+    //     //selectLesson(event.target.index);
+    //     console.log(event.target.value);
+    // }
+
+    const instrumentsItems = instrumentList.map((instrument, index) => {
+        return (
+        <div id='instrument-select' onClick={onClick} index={index} key={index}>{instrumentList[index].name}</div>
+        );
+    })
+
     return (
         <div id='instrument-menu'>
-            <div id='instrument-select' onClick={onClick}>Saxophone</div>
-            <div id='instrument-select' onClick={onClick}>Double Bass</div>
-            <div id='instrument-select' onClick={onClick}>Electric Guitar</div>
-            <div id='instrument-select' onClick={onClick}>Trumpet</div>
+            {instrumentsItems}
         </div>
     )
-
-
-
-}
+};
 
 export default InstrumentMenu;

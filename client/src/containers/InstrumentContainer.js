@@ -8,7 +8,7 @@ import Welcome from '../components/Welcome.js'
 const InstrumentContainer = () => {
     
     const [instrumentList, setInstrumentList] = useState([]);
-    const [selectedInstrument, setSelectedInstrument] = useState(null);
+    const [selectedInstrument, setSelectedInstrument] = useState("");
 
     useEffect(() => {
         getInstruments()
@@ -17,11 +17,16 @@ const InstrumentContainer = () => {
         })
     }, []);
 
-    const onClick = (event) => {
-        return(
-            console.log("Hello!")
-        )
-    }
+    const onClick = (e) => {
+        const index = e.target.getAttribute("index");
+        //console.log(index);
+        //console.log(instrumentList[index].name);
+        setSelectedInstrument(instrumentList[index]);
+    };
+
+    // useEffect(() => {
+    //     console.log(`You have chosen ${selectedInstrument.name}`)
+    //     }, [selectedInstrument]);
 
     return (
         <>

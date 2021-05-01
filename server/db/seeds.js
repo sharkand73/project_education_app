@@ -4,7 +4,7 @@ db.dropDatabase();
 db.instruments.insertMany([
   
 // TRUMPET
-    {instrument: "Trumpet",
+    {name: "Trumpet",
     image: "",
     sound: "",
     //slides
@@ -25,7 +25,7 @@ db.instruments.insertMany([
     },
 
 // DOUBLE BASS
-    {instrument: "Double Bass",
+    {name: "Double Bass",
     image: "",
     sound: "",
     //slides
@@ -46,7 +46,7 @@ db.instruments.insertMany([
     },
     
 // ELECTRIC GUITAR
-    {instrument: "Electric Guitar",
+    {name: "Electric Guitar",
     image: "",
     sound: "",
     //slides
@@ -67,7 +67,7 @@ db.instruments.insertMany([
     },
 
 // SAXOPHONE
-    {instrument: "Saxophone",
+    {name: "Saxophone",
     image: "",
     sound: "",
     //slides

@@ -5,7 +5,7 @@ import Quiz from './Quiz.js';
 const Lesson = ({selectedInstrument}) => {
     return (
         <>
-        <p>This is a lesson</p>
+        <p>This is a {selectedInstrument.name} lesson</p>
         <Slides />
         <Quiz />
         </>
