@@ -2,7 +2,7 @@ use education;
 db.dropDatabase();
 
 db.instruments.insertMany([
-  
+
 // TRUMPET
     {name: "Trumpet",
     images: ['tpt_0.jpg', 'tpt_1.png', 'tpt_2.jpg'],
@@ -40,14 +40,25 @@ db.instruments.insertMany([
     sound: "",
     //slides
     slides: [
-    ["I am the first paragraph of the first double bass slide", "I am the second paragraph of the first double bass slide", "I am the third paragraph of the first double bass slide"],
-    ["I am the first paragraph of the second double bass slide", "I am the second paragraph of the second double bass slide", "I am the third paragraph of the second double bass slide"],
-    ["I am the first paragraph of the third double bass slide", "I am the second paragraph of the third double bass slide", "I am the third paragraph of the third double bass slide"]
+    [
+    "The double bass is a wooden instrument with four strings. It looks like a giant violin!", 
+    "It is used in a wide variety of musical styles, such as jazz, classical, rockabilly and folk music.", 
+    "It is tuned low and so makes a very deep sound when played."
+    ],
+    [
+    "No one knows when exactly the double bass was invented, but it appeared some time in the 16th century.", 
+    "Double basses are very large but vary in size depending on the player, usually going up to head height.", 
+    "They can range from 154cm (61 inches) to 190cm (75 inches) in height!"
+    ],
+    [
+    "Before the invention of the electric bass guitar, double basses were the main bass instrument in rock'n'roll bands.", 
+    "Some of the most famous double bass players have been jazz musicians, who normally play without a bow.", 
+    "Some famous double bass players include Charles Mingus, Ron Carter and Oscar Pettiford."]
     ],
     //quiz
     quiz: [
     {question: "Who invented the double bass?", 
-    answers: [{answer: "Adolphe Double", status: false}, {answer: "Adolf Bass", status: true}, {answer: "Goldman Sax", status: false}, {answer: "Bob Holness", status: false}]},
+    answers: [{answer: "Adolphe Double", status: false}, {answer: "Count Basie", status: false}, {answer: "No one knows", status: true}, {answer: "Charles Mingus", status: false}]},
     {question: "What is the double bass made out of?", 
     answers: [{answer: "brass", status: false}, {answer: "wood", status: true}, {answer: "gold", status: false}, {answer: "plastic", status: false}]},
     {question: "Which is the sound of the double bass?", 
@@ -61,9 +72,21 @@ db.instruments.insertMany([
     sound: "",
     //slides
     slides: [
-    ["I am the first paragraph of the first electric guitar slide", "I am the second paragraph of the first electric guitar slide", "I am the third paragraph of the first electric guitar slide"],
-    ["I am the first paragraph of the second electric guitar slide", "I am the second paragraph of the second electric guitar slide", "I am the third paragraph of the second electric guitar slide"],
-    ["I am the first paragraph of the third electric guitar slide", "I am the second paragraph of the third electric guitar slide", "I am the third paragraph of the third electric guitar slide"]
+    [
+    "I am the first paragraph of the first electric guitar slide", 
+    "I am the second paragraph of the first electric guitar slide", 
+    "I am the third paragraph of the first electric guitar slide"
+    ],
+    [
+    "I am the first paragraph of the second electric guitar slide", 
+    "I am the second paragraph of the second electric guitar slide", 
+    "I am the third paragraph of the second electric guitar slide"
+    ],
+    [
+    "I am the first paragraph of the third electric guitar slide", 
+    "I am the second paragraph of the third electric guitar slide", 
+    "I am the third paragraph of the third electric guitar slide"
+    ]
     ],
     //quiz
     quiz: [
