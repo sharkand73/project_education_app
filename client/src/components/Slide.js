@@ -1,4 +1,8 @@
 import React from 'react';
+//const imgPath = '../images/sax_0.png';
+const imgName = 'sax_0.png';
+//import sax_0 from require(imgPath);
+//import sax_0 from '../images/images.js';
 
 const Slide = ({selectedInstrument, currentSlideIndex, finalSlideIndex, prev, next, startQuiz}) => {
     // const prev = () => {
@@ -13,6 +17,7 @@ const Slide = ({selectedInstrument, currentSlideIndex, finalSlideIndex, prev, ne
     // };
 
     const currentSlide = selectedInstrument.slides[currentSlideIndex];
+    const slideImage = selectedInstrument.images[currentSlideIndex];
     const slideContent = currentSlide.map((paragraph) => {
         return (
             <p>{paragraph}</p>
@@ -22,6 +27,9 @@ const Slide = ({selectedInstrument, currentSlideIndex, finalSlideIndex, prev, ne
 
     return(
         <div>
+            <div>
+            <img src={require('../images/'+ slideImage).default} alt='saxes' />
+            </div>
             {slideContent}
             <div className='prev-next'>
                 {(currentSlideIndex > 0)?  
