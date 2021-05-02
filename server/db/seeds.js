@@ -2,7 +2,7 @@ use education;
 db.dropDatabase();
 
 db.instruments.insertMany([
-  
+
 // TRUMPET
     {name: "Trumpet",
     images: ['tpt_0.jpg', 'tpt_1.png', 'tpt_2.jpg'],
@@ -40,14 +40,25 @@ db.instruments.insertMany([
     sound: "",
     //slides
     slides: [
-    ["I am the first paragraph of the first double bass slide", "I am the second paragraph of the first double bass slide", "I am the third paragraph of the first double bass slide"],
-    ["I am the first paragraph of the second double bass slide", "I am the second paragraph of the second double bass slide", "I am the third paragraph of the second double bass slide"],
-    ["I am the first paragraph of the third double bass slide", "I am the second paragraph of the third double bass slide", "I am the third paragraph of the third double bass slide"]
+    [
+    "The double bass is a wooden instrument with four strings. It looks like a giant violin!", 
+    "It is used in a wide variety of musical styles, such as jazz, classical, rockabilly and folk music.", 
+    "It is tuned low and so makes a very deep sound when played."
+    ],
+    [
+    "No one knows when exactly the double bass was invented, but it appeared some time in the 16th century.", 
+    "Double basses are very large but vary in size depending on the player, usually going up to head height.", 
+    "They can range from 154cm (61 inches) to 190cm (75 inches) in height!"
+    ],
+    [
+    "Before the invention of the electric bass guitar, double basses were the main bass instrument in rock'n'roll bands.", 
+    "Some of the most famous double bass players have been jazz musicians, who normally play without a bow.", 
+    "Some famous double bass players include Charles Mingus, Ron Carter and Oscar Pettiford."]
     ],
     //quiz
     quiz: [
     {question: "Who invented the double bass?", 
-    answers: [{answer: "Adolphe Double", status: false}, {answer: "Adolf Bass", status: true}, {answer: "Goldman Sax", status: false}, {answer: "Bob Holness", status: false}]},
+    answers: [{answer: "Adolphe Double", status: false}, {answer: "Count Basie", status: false}, {answer: "No one knows", status: true}, {answer: "Charles Mingus", status: false}]},
     {question: "What is the double bass made out of?", 
     answers: [{answer: "brass", status: false}, {answer: "wood", status: true}, {answer: "gold", status: false}, {answer: "plastic", status: false}]},
     {question: "Which is the sound of the double bass?", 
@@ -61,16 +72,28 @@ db.instruments.insertMany([
     sound: "",
     //slides
     slides: [
-    ["I am the first paragraph of the first electric guitar slide", "I am the second paragraph of the first electric guitar slide", "I am the third paragraph of the first electric guitar slide"],
-    ["I am the first paragraph of the second electric guitar slide", "I am the second paragraph of the second electric guitar slide", "I am the third paragraph of the second electric guitar slide"],
-    ["I am the first paragraph of the third electric guitar slide", "I am the second paragraph of the third electric guitar slide", "I am the third paragraph of the third electric guitar slide"]
+    [
+    "The electric guitar is a six stringed instrument which gets uses electricity to make sounds. It is usually made of wood and metal.", 
+    "It uses magnets called pick-ups on the body, when you strum the guitar strings the pick-up turns them into electrical signals.", 
+    "These electrical signals then go to an amplifier which makes the signal louder, and means you can play a guitar very loud!"
+    ],
+    [
+    "The electric guitar was invented in 1932 by George Beauchamp and Adolph Rickenbacker.", 
+    "However it wasn't until the 1950s that cheaper, better sounding electric guitars became available. Most famously the Fender Telecaster, invented by Leo Fender.", 
+    "Electric guitars are played in nearly every kind of music you can think of, but they're most famous for their use in rock and blues music."
+    ],
+    [
+    "You can make many different sounds with an electric guitar, and many famous guitar players have developed their own signature sound.", 
+    "One of the earliest musicians to use an electric guitar was Sister Rosetta Tharpe, who was a big influence on early rock music.", 
+    "Some other famous electric guitar players include Jimi Hendrix, Eddie Van Halen and Muddy Waters."
+    ]
     ],
     //quiz
     quiz: [
     {question: "Who invented the electric guitar?", 
-    answers: [{answer: "Adolphe Electric", status: false}, {answer: "Adolf Guitar", status: false}, {answer: "Goldman Sax", status: true}, {answer: "Bob Holness", status: false}]},
-    {question: "What is the electric guitar made out of?", 
-    answers: [{answer: "brass", status: false}, {answer: "wood", status: false}, {answer: "gold", status: true}, {answer: "plastic", status: false}]},
+    answers: [{answer: "Morecambe and Wise", status: false}, {answer: "Kanye and Kim", status: false}, {answer: "Beauchamp and Rickenbacker", status: true}, {answer: "Leo Fender", status: false}]},
+    {question: "What makes the electric guitar louder?", 
+    answers: [{answer: "The strings", status: false}, {answer: "Blowing into it", status: false}, {answer: "The amplifier", status: true}, {answer: "Nothing", status: false}]},
     {question: "Which is the sound of the electric guitar?", 
     answers: [{answer: "1", status: false}, {answer: "2", status: false}, {answer: "3", status: true}, {answer: "4", status: false}]}
     ]
