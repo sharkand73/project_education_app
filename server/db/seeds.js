@@ -5,7 +5,7 @@ db.instruments.insertMany([
   
 // TRUMPET
     {name: "Trumpet",
-    image: "",
+    images: ['tpt_0.jpg', 'tpt_1.png', 'tpt_2.jpg'],
     sound: "",
     //slides
     slides: [
@@ -36,7 +36,7 @@ db.instruments.insertMany([
 
 // DOUBLE BASS
     {name: "Double Bass",
-    image: "",
+    images: ['tpt_0.jpg', 'tpt_1.png', 'tpt_2.jpg'],
     sound: "",
     //slides
     slides: [
@@ -57,7 +57,7 @@ db.instruments.insertMany([
     
 // ELECTRIC GUITAR
     {name: "Electric Guitar",
-    image: "",
+    images: ['tpt_0.jpg', 'tpt_1.png', 'tpt_2.jpg'],
     sound: "",
     //slides
     slides: [
@@ -78,7 +78,7 @@ db.instruments.insertMany([
 
 // SAXOPHONE
     {name: "Saxophone",
-    image: "",
+    images: ['sax_0.png', 'sax_1.jpg', 'sax_2.jpg'],
     sound: "",
  //slides
  slides: [
