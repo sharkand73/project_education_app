@@ -3,10 +3,10 @@ import QuizQuestion from './QuizQuestion.js';
 
 const QuizForm = ({selectedInstrument}) => {
 
-    const questionList = selectedInstrument.quiz.map((qa) => {
+    const questionList = selectedInstrument.quiz.map((qa, index) => {
         return(
             <li>
-            <QuizQuestion qa={qa} />
+            <QuizQuestion qa={qa} key={index}/>
             </li>
         )
     })
