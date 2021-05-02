@@ -2,9 +2,24 @@ import React from 'react';
 
 const QuizQuestion = ({qa}) => {
 
+    const handleAnswer = (event) => {
+        // console.log(answerInfo)
+        // const tf = event.target.getAttribute("status");
+        const tf = event.status;
+        if (tf === "true") {
+            return (
+                <p>You are correct!</p>
+            )}
+        else {
+            return (
+                <p>Try again</p>
+        )}
+        } 
+
     const answers = qa.answers.map((answerInfo, index) => {
-        return(
-            <button key={index} status={answerInfo.status}>{answerInfo.answer}</button>
+        // console.log(answerInfo.status)
+        return(  
+            <button key={index} status={answerInfo.answer.status} onClick={handleAnswer}>{answerInfo.answer}</button>
         )
     })
 
@@ -12,6 +27,7 @@ const QuizQuestion = ({qa}) => {
         <>
         <h5>{qa.question}</h5>
         {answers}
+        <p>{handleAnswer}</p>
         </>
     )
 }
