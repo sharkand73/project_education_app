@@ -9,6 +9,8 @@ const InstrumentContainer = () => {
     
     const [instrumentList, setInstrumentList] = useState([]);
     const [selectedInstrument, setSelectedInstrument] = useState("");
+    const [quizStarted, setQuizStarted] = useState(false);
+    const [currentSlideIndex, setSlideIndex] = useState(0);
 
     useEffect(() => {
         getInstruments()
@@ -22,6 +24,8 @@ const InstrumentContainer = () => {
         //console.log(index);
         //console.log(instrumentList[index].name);
         setSelectedInstrument(instrumentList[index]);
+        setQuizStarted(false)
+        setSlideIndex(0);
     };
 
     // useEffect(() => {
@@ -34,7 +38,13 @@ const InstrumentContainer = () => {
             <InstrumentMenu instrumentList={instrumentList} onClick={onClick} />
         </div>
         <div>
-            {selectedInstrument ? <Lesson selectedInstrument={selectedInstrument} /> : <Welcome />}
+            {selectedInstrument ? 
+            <Lesson selectedInstrument={selectedInstrument} 
+            quizStarted={quizStarted} 
+            setQuizStarted={setQuizStarted} 
+            currentSlideIndex={currentSlideIndex}
+            setSlideIndex={setSlideIndex}
+            /> : <Welcome />}
         </div>
         </>
     )
