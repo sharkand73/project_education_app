@@ -1,25 +1,22 @@
-import React, { useDebugValue } from 'react';
+import React, {useState} from 'react';
 
 const QuizQuestion = ({qa}) => {
 
+    const [currentMessage, setCurrentMessage] = useState("")
+
     const handleAnswer = (event) => {
-        console.log(event.target["tf"])
-        // console.log(answerInfo)
-        // const tf = event.target.tf;
-        // if (tf === true) {
-        //     return (
-        //         console.log("You are correct")
-        //     )}
-        // else if { 
-        //     return (
-        //         console.log("You are wrong")
-        // )}
-        } 
+        console.log(event.target.value)
+        const tf = event.target.value;
+        if (tf === "true") {
+            setCurrentMessage("You are correct!")}
+        else { 
+            setCurrentMessage("Try again")}
+        }
 
     const answers = qa.answers.map((answerInfo, index) => {
-        console.log(answerInfo.status.toString())
+        // console.log(answerInfo.status.toString())
         return(  
-            <button key={index} tf={answerInfo.status.toString()} onClick={handleAnswer}>{answerInfo.answer}</button>
+            <button key={index} value={answerInfo.status.toString()} onClick={handleAnswer}>{answerInfo.answer}</button>
         )
     })
 
@@ -27,7 +24,7 @@ const QuizQuestion = ({qa}) => {
         <>
         <h5>{qa.question}</h5>
         {answers}
-        <p>{handleAnswer}</p>
+        <p>{currentMessage}</p>
         </>
     )
 }
