@@ -2,9 +2,8 @@ import React, { useState } from 'react';
 import Slide from './Slide.js';
 import QuizForm from './QuizForm.js';
 
-const Lesson = ({selectedInstrument}) => {
-    const [currentSlideIndex, setSlideIndex] = useState(0);
-    const [quizStarted, setQuizStarted] = useState(false);
+const Lesson = ({selectedInstrument, quizStarted, setQuizStarted, currentSlideIndex, setSlideIndex}) => {
+
     const finalSlideIndex = selectedInstrument.slides.length - 1;
 
     const prev = () => {
