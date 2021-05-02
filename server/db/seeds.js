@@ -73,27 +73,27 @@ db.instruments.insertMany([
     //slides
     slides: [
     [
-    "I am the first paragraph of the first electric guitar slide", 
-    "I am the second paragraph of the first electric guitar slide", 
-    "I am the third paragraph of the first electric guitar slide"
+    "The electric guitar is a six stringed instrument which gets uses electricity to make sounds. It is usually made of wood and metal.", 
+    "It uses magnets called pick-ups on the body, when you strum the guitar strings the pick-up turns them into electrical signals.", 
+    "These electrical signals then go to an amplifier which makes the signal louder, and means you can play a guitar very loud!"
     ],
     [
-    "I am the first paragraph of the second electric guitar slide", 
-    "I am the second paragraph of the second electric guitar slide", 
-    "I am the third paragraph of the second electric guitar slide"
+    "The electric guitar was invented in 1932 by George Beauchamp and Adolph Rickenbacker.", 
+    "However it wasn't until the 1950s that cheaper, better sounding electric guitars became available. Most famously the Fender Telecaster, invented by Leo Fender.", 
+    "Electric guitars are played in nearly every kind of music you can think of, but they're most famous for their use in rock and blues music."
     ],
     [
-    "I am the first paragraph of the third electric guitar slide", 
-    "I am the second paragraph of the third electric guitar slide", 
-    "I am the third paragraph of the third electric guitar slide"
+    "You can make many different sounds with an electric guitar, and many famous guitar players have developed their own signature sound.", 
+    "One of the earliest musicians to use an electric guitar was Sister Rosetta Tharpe, who was a big influence on early rock music.", 
+    "Some other famous electric guitar players include Jimi Hendrix, Eddie Van Halen and Muddy Waters."
     ]
     ],
     //quiz
     quiz: [
     {question: "Who invented the electric guitar?", 
-    answers: [{answer: "Adolphe Electric", status: false}, {answer: "Adolf Guitar", status: false}, {answer: "Goldman Sax", status: true}, {answer: "Bob Holness", status: false}]},
-    {question: "What is the electric guitar made out of?", 
-    answers: [{answer: "brass", status: false}, {answer: "wood", status: false}, {answer: "gold", status: true}, {answer: "plastic", status: false}]},
+    answers: [{answer: "Morecambe and Wise", status: false}, {answer: "Kanye and Kim", status: false}, {answer: "Beauchamp and Rickenbacker", status: true}, {answer: "Leo Fender", status: false}]},
+    {question: "What makes the electric guitar louder?", 
+    answers: [{answer: "The strings", status: false}, {answer: "Blowing into it", status: false}, {answer: "The amplifier", status: true}, {answer: "Nothing", status: false}]},
     {question: "Which is the sound of the electric guitar?", 
     answers: [{answer: "1", status: false}, {answer: "2", status: false}, {answer: "3", status: true}, {answer: "4", status: false}]}
     ]
