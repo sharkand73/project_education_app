@@ -1,10 +1,10 @@
-
+import InstrumentContainer from './containers/InstrumentContainer.js'
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <p>Hello World!</p>
+      <InstrumentContainer />
     </div>
   );
 }
