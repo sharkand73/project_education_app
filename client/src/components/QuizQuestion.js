@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
+// The following function will be used to shuffle the answers.
 
-const QuizQuestion = ({qa}) => {
+const QuizQuestion = ({question, answersArray}) => {
 
     const [currentMessage, setCurrentMessage] = useState("")
 
@@ -12,8 +13,8 @@ const QuizQuestion = ({qa}) => {
         else { 
             setCurrentMessage("Try again")}
         }
-
-    const answers = qa.answers.map((answerInfo, index) => {
+    
+    const answers = answersArray.map((answerInfo, index) => {
         // console.log(answerInfo.status.toString())
         return(  
             <button key={index} value={answerInfo.status.toString()} onClick={handleAnswer}>{answerInfo.answer}</button>
@@ -22,7 +23,7 @@ const QuizQuestion = ({qa}) => {
 
     return (
         <>
-        <h5>{qa.question}</h5>
+        <h5>{question}</h5>
         {answers}
         <p>{currentMessage}</p>
         </>
