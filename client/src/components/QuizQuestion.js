@@ -1,25 +1,25 @@
-import React from 'react';
+import React, { useDebugValue } from 'react';
 
 const QuizQuestion = ({qa}) => {
 
     const handleAnswer = (event) => {
+        console.log(event.target["tf"])
         // console.log(answerInfo)
-        // const tf = event.target.getAttribute("status");
-        const tf = event.status;
-        if (tf === "true") {
-            return (
-                <p>You are correct!</p>
-            )}
-        else {
-            return (
-                <p>Try again</p>
-        )}
+        // const tf = event.target.tf;
+        // if (tf === true) {
+        //     return (
+        //         console.log("You are correct")
+        //     )}
+        // else if { 
+        //     return (
+        //         console.log("You are wrong")
+        // )}
         } 
 
     const answers = qa.answers.map((answerInfo, index) => {
-        // console.log(answerInfo.status)
+        console.log(answerInfo.status.toString())
         return(  
-            <button key={index} status={answerInfo.answer.status} onClick={handleAnswer}>{answerInfo.answer}</button>
+            <button key={index} tf={answerInfo.status.toString()} onClick={handleAnswer}>{answerInfo.answer}</button>
         )
     })
 
