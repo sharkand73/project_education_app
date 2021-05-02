@@ -1,25 +1,23 @@
 import React, {useState} from 'react';
 import QuizQuestion from './QuizQuestion.js';
+function shuffleArray(array) {
+    for (var i = array.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
+}
 
 const QuizForm = ({selectedInstrument}) => {
 
-    // const [selectedAnswer, setSelectedAnswer]
-
-    // const handleAnswer = (event) => {
-    //     if (event.target.status === true) {
-    //         return (
-    //             <p>You are correct!</p>
-    //         )}
-    //     else {
-    //         return (
-    //             <p>Try again</p>
-    //     )}
-    //     }
-
     const questionList = selectedInstrument.quiz.map((qa, index) => {
+        let answersArray = qa.answers;
+        let question = qa.question;
+        shuffleArray(answersArray);
         return(
             <li>
-            <QuizQuestion qa={qa} key={index}/>
+            <QuizQuestion question={question} answersArray={answersArray} key={index}/>
 
             </li>
         )
