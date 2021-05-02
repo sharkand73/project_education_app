@@ -19,7 +19,7 @@ const InstrumentContainer = () => {
 
     const onClick = (e) => {
         const index = e.target.getAttribute("index");
-        //console.log(index);
+        console.log(e.target.index);
         //console.log(instrumentList[index].name);
         setSelectedInstrument(instrumentList[index]);
     };

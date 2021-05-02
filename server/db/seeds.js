@@ -9,19 +9,19 @@ db.instruments.insertMany([
     sound: "",
     //slides
     slides: [
-            [
-            "The trumpet is a brass instrument with three valves and a mouthpiece.",
-            "It is commonly played in classcial and jazz ensembles.",
-            "There are many types, but the most common one is the B flat trumpet."
-            ],
-            [
-            "The trumpet has been used in royal ceremonies and in battle throught history, and can be traced at least as back far as 1500BC.",
-            "It even gets a mention or two in the bible.  It is said that an early version of the trumpet, the Shofar, was used to blow down the walls of Jericho."
-            ],
-            [
-            "Trumpeter Dizzy Gillespie was famous for his 'bent trumpet' and for blowing out his cheeks like a bullfrog when he played.",
-            "Famous jazz trumpeters include Louis Armstrong, Bix Beiderbecke, Miles Davis, and Freddie Hubbard."
-            ]
+    [
+    "The trumpet is a brass instrument with three valves and a mouthpiece.",
+    "It is commonly played in classcial and jazz ensembles.",
+    "There are many types, but the most common one is the B flat trumpet."
+    ],
+    [
+    "The trumpet has been used in royal ceremonies and in battle throught history, and can be traced at least as back far as 1500BC.",
+    "It even gets a mention or two in the bible.  It is said that an early version of the trumpet, the Shofar, was used to blow down the walls of Jericho."
+    ],
+    [
+    "Trumpeter Dizzy Gillespie was famous for his 'bent trumpet' and for blowing out his cheeks like a bullfrog when he played.",
+    "Famous jazz trumpeters include Louis Armstrong, Bix Beiderbecke, Miles Davis, and Freddie Hubbard."
+    ]
     ],
     //quiz
     quiz: [
@@ -107,5 +107,4 @@ answers: [{answer: "Adolphe Sax", status: true}, {answer: "Adolf Hitler", status
 ]
 }
 
-
-  ]);
+]);
