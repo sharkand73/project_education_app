@@ -44,7 +44,7 @@
 #grid-container {
   display: grid;
   /* grid-template-columns: 70% 30%; */
-  grid-template-columns: 2fr 10fr 2fr;
+  grid-template-columns: 0.5fr 10fr 1fr;
   /* grid-template-rows: 2fr 2fr 4fr 8fr; */
   grid-template-rows: repeat(24, 0.3fr);
 }
@@ -74,11 +74,12 @@
   /* grid-row-end: span 1; */
 }
 
+
 /* INSTRUMENT MENU */
 #menu-grid{
   grid-column-start:2;
   grid-column-end: span 1;
-  grid-row-start: 4;
+  grid-row-start: 3;
 
   /* grid-column-start: 1;
   grid-column-end: span col2-start;
@@ -87,18 +88,25 @@
 }
 
 
-/* INSTRUMENT MENU */
-#menu-grid{
+/* WELCOME */
+#welcome-text-grid{
   grid-column-start:2;
-  grid-column-end: span 1;
-  grid-row-start: 4;
-
-  /* grid-column-start: 1;
-  grid-column-end: span col2-start;
-  grid-row-start: 2;
-  grid-row-end: span 1; */
+  /* grid-column-end: 8; */
+  grid-row-start: 5;
+  grid-row-end: span 2;
+  /* grid-row-end: 2;
+  grid-column-start: 1; */
+  /* grid-column-end: span col2-start; */
+  /* grid-row-start: 1; */
+  /* grid-row-end: span 1; */
 }
 
+
+
+
+
+
+/* ...................... */
 
 /* INSTRUMENT CONTAINER */
 /* #grid-container {

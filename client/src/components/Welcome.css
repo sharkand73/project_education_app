@@ -6,7 +6,35 @@
 
 #logo-size{
     /* float:left; */
-    width: 150px;
-    height: 150px;
+    width: 180px;
+    height: 170px;
     padding: 0px;
 }
+
+#welcome-slide{
+    border-style: solid;
+    border-color: rgb(235, 204, 82);
+    border-radius: 20px;
+    background-color: white;
+    padding: 120px 30px;
+}
+
+#welcome-grid-container {
+    display: grid;
+    /* grid-template-columns: 70% 30%; */
+    grid-template-columns: 50% 50%;
+    /* grid-template-rows: 2fr 2fr 4fr 8fr; */
+    grid-template-rows: repeat(8, 0.2fr);
+  }
+  
+  /* WELCOME */
+  #welcome-grid{
+    grid-column-start:1;
+    /* grid-column-end: 1; */
+    grid-row-start: 1;
+    grid-row-end: span 2;
+    /* grid-column-start: 1; */
+    /* grid-column-end: span col2-start; */
+    /* grid-row-start: 1; */
+    /* grid-row-end: span 1; */
+  }
