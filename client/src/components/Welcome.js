@@ -25,9 +25,9 @@ const Welcome = ({onInput}) => {
             <img id='boxy-size' src={Boxy_Hello} alt=""/>
             <form>
                 <label htmlFor="name">Your Name: </label>
-                <input type="text" id="name" name="name" onChange={onChange} defaultValue="Enter your name here"></input>
+                <input type="text" id="name" name="name" onChange={onChange} placeholder="Enter your name here"></input>
                 <label htmlFor="age">Your Age: </label>
-                <input type="text" id="age" name="age" onChange={onChange} defaultValue="Enter your age here"></input>
+                <input type="text" id="age" name="age" onChange={onChange} placeholder="Enter your age here"></input>
                 <input type="submit" value="submit" onClick={handleFormSubmit}></input>
             </form>
         </div>
