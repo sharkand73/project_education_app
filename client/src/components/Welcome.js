@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import Boxy_Hello from "./Boxy_Hello.png";
+import Boxy_Hello from "./Boxy_Andy_2.svg";
 import Logo from "./Logo.png";
 import "./Welcome.css";
 
