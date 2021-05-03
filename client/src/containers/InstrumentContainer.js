@@ -15,6 +15,7 @@ const InstrumentContainer = () => {
     const [currentSlideIndex, setSlideIndex] = useState(0);
     const [inputName, setInputName] = useState("");
     const [inputAge, setInputAge] = useState("");
+    const [formSubmitted, setFormSubmitted] = useState(false)
 
     function playAudio(index){
         if (instrumentList !== []){
@@ -64,7 +65,7 @@ const InstrumentContainer = () => {
             setSlideIndex={setSlideIndex}
             inputName={inputName}
             inputAge={inputAge}
-            /> : <Welcome onInput={onInput}/>}
+            /> : <Welcome onInput={onInput} formSubmitted={formSubmitted} setFormSubmitted={setFormSubmitted} />}
         </div>
         </>
     )
