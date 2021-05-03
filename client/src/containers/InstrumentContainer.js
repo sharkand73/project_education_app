@@ -16,7 +16,7 @@ const InstrumentContainer = () => {
     const [inputAge, setInputAge] = useState("");
 
     function playAudio(index){
-        if (instrumentList != []){
+        if (instrumentList !== []){
             let audioSrc = instrumentList[index].sounds[0];
             let audio = require('../sounds/' + audioSrc).default;
             let clip = new Audio(audio);
@@ -42,7 +42,6 @@ const InstrumentContainer = () => {
 
 
     const onInput = (formData) => {
-        console.log(formData)
         const name = formData.name;
         const age = formData.age;
         setInputName(name);

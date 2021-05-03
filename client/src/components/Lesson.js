@@ -26,7 +26,8 @@ const Lesson = ({selectedInstrument, quizStarted, setQuizStarted, currentSlideIn
         {quizStarted ? 
         <QuizForm selectedInstrument={selectedInstrument}/> : 
         <div>
-        <h3>Hi {inputName}, Welcome to the {selectedInstrument.name} Lesson!</h3>
+        <h3>Hi {inputName? <span>{inputName}</span>: <span>there</span>}, 
+        welcome to the {selectedInstrument.name} Lesson!</h3>
         <Slide selectedInstrument={selectedInstrument} 
         currentSlideIndex={currentSlideIndex} 
         finalSlideIndex={finalSlideIndex}
