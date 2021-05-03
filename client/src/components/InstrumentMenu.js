@@ -4,6 +4,7 @@ import Double_Bass from "./Double_Bass.png";
 import Electric_Guitar from "./Electric_Guitar.png";
 import Saxophone from "./Saxophone.png";
 import "./InstrumentMenu.css";
+import '../App.css';
 
 
 
@@ -24,7 +25,7 @@ const InstrumentMenu = ({instrumentList, onClick}) => {
     })
 
     return (
-        <div id='instrument-menu'>
+        <div id='instrument-menu' id="menu-grid">
             {instrumentsItems}
         </div>
     )

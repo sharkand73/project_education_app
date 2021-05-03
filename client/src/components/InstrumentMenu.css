@@ -1,5 +1,9 @@
 #instrument-select{
-    width: 200px;
-    height: 180px;
+    width: 240px;
+    height: 220px;
+    margin: 0px 15px;
     padding: 0px;
+    border-style: solid;
+    border-color: rgb(0,204,255);
+    border-radius: 30px;
 }
