@@ -61,8 +61,8 @@ db.instruments.insertMany([
     answers: [{answer: "Adolphe Double", status: false}, {answer: "Count Basie", status: false}, {answer: "No one knows", status: true}, {answer: "Charles Mingus", status: false}]},
     {question: "What is the double bass made out of?", 
     answers: [{answer: "brass", status: false}, {answer: "wood", status: true}, {answer: "gold", status: false}, {answer: "plastic", status: false}]},
-    {question: "Which is the sound of the double bass?", 
-    answers: [{answer: "1", status: false}, {answer: "2", status: true}, {answer: "3", status: false}, {answer: "4", status: false}]}
+    {question: "How tall can a double bass be?", 
+    answers: [{answer: "100cm", status: false}, {answer: "190cm", status: true}, {answer: "20cm", status: false}, {answer: "5 meters", status: false}]}
     ]
     },
     
@@ -94,8 +94,8 @@ db.instruments.insertMany([
     answers: [{answer: "Morecambe and Wise", status: false}, {answer: "Kanye and Kim", status: false}, {answer: "Beauchamp and Rickenbacker", status: true}, {answer: "Leo Fender", status: false}]},
     {question: "What makes the electric guitar louder?", 
     answers: [{answer: "The strings", status: false}, {answer: "Blowing into it", status: false}, {answer: "The amplifier", status: true}, {answer: "Nothing", status: false}]},
-    {question: "Which is the sound of the electric guitar?", 
-    answers: [{answer: "1", status: false}, {answer: "2", status: false}, {answer: "3", status: true}, {answer: "4", status: false}]}
+    {question: "What are pick-ups on a guitar?", 
+    answers: [{answer: "Nobody knows", status: false}, {answer: "Magnets", status: true}, {answer: "A chocolate bar", status: false}, {answer: "Strings", status: false}]}
     ]
     },
 

@@ -12,6 +12,8 @@ const InstrumentContainer = () => {
     const [selectedInstrument, setSelectedInstrument] = useState("");
     const [quizStarted, setQuizStarted] = useState(false);
     const [currentSlideIndex, setSlideIndex] = useState(0);
+    const [inputName, setInputName] = useState("");
+    const [inputAge, setInputAge] = useState("");
 
     function playAudio(index){
         if (instrumentList != []){
@@ -37,6 +39,16 @@ const InstrumentContainer = () => {
         playAudio(index);
     };
 
+
+
+    const onInput = (formData) => {
+        console.log(formData)
+        const name = formData.name;
+        const age = formData.age;
+        setInputName(name);
+        setInputAge(age);
+    }
+
     return (
         <>
         <div>
@@ -49,7 +61,9 @@ const InstrumentContainer = () => {
             setQuizStarted={setQuizStarted} 
             currentSlideIndex={currentSlideIndex}
             setSlideIndex={setSlideIndex}
-            /> : <Welcome />}
+            inputName={inputName}
+            inputAge={inputAge}
+            /> : <Welcome onInput={onInput}/>}
         </div>
         </>
     )

@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import QuizQuestion from './QuizQuestion.js';
 function shuffleArray(array) {
     for (var i = array.length - 1; i > 0; i--) {
