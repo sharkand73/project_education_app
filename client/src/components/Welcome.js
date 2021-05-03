@@ -2,11 +2,13 @@ import React from 'react';
 import Boxy_Hello from "./Boxy_Hello.png";
 import Logo from "./Logo.png";
 import "./Welcome.css";
+import '../App.css';
+
 
 const Welcome = () => {
 
     return (
-        <div>
+        <div id='icon-grid'>
             <img id='logo-size' src={Logo} alt=""/>
             <h1>Select a box to start a lesson</h1>
             <h2>Welcome to Learning Box!</h2>

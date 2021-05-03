@@ -3,6 +3,7 @@ import {getInstruments} from '../InstrumentsService.js'
 import InstrumentMenu from '../components/InstrumentMenu.js'
 import Lesson from '../components/Lesson.js'
 import Welcome from '../components/Welcome.js'
+import '../App.css';
 
 
 const InstrumentContainer = () => {
@@ -34,10 +35,11 @@ const InstrumentContainer = () => {
 
     return (
         <>
-        <div>
+        <div id="grid-container" >
+     
             <InstrumentMenu instrumentList={instrumentList} onClick={onClick} />
-        </div>
-        <div>
+       
+    
             {selectedInstrument ? 
             <Lesson selectedInstrument={selectedInstrument} 
             quizStarted={quizStarted} 
@@ -45,6 +47,7 @@ const InstrumentContainer = () => {
             currentSlideIndex={currentSlideIndex}
             setSlideIndex={setSlideIndex}
             /> : <Welcome />}
+   
         </div>
         </>
     )
