@@ -15,10 +15,12 @@ const Welcome = () => {
         <div id='select-text-grid'>
                 <h1>Select a box to start a lesson</h1>
         </div>
-        <div id='welcome-text-grid'  >
-            <div id='welcome-grid-container'>
-                <h2 id="welcome-slide">Welcome to Learning Box!</h2>
-                <img id='boxy-size' src={Boxy_Hello} alt=""/>
+        <div id='welcome-slide-grid'>
+            <div className='welcome-slide-border'>
+                <div id='welcome-grid-container'>
+                <h2 id='welcome-text-grid'>Welcome to Learning Box!</h2>
+                <img className='boxy-size' id ='welcome-boxy-grid' src={Boxy_Hello} alt=""/>
+                </div>
             </div>
         </div>
         </>
