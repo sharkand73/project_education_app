@@ -32,7 +32,7 @@ const Welcome = ({onInput, formSubmitted, setFormSubmitted}) => {
                 <img className='boxy-size' id ='welcome-boxy-grid' src={Boxy_Hello} alt=""/>
                 {formSubmitted ? 
                 // <div id='select-text-grid'>
-                <h1 id='select-text-grid' >Select a box to start a lesson</h1>
+                <h1 id='select-text-grid' className="grow" >Select a box to start a lesson</h1>
                 // </div> 
                 :
                 <form id='form-grid'>
