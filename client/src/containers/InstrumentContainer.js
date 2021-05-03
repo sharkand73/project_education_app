@@ -35,9 +35,10 @@ const InstrumentContainer = () => {
     //     }, [selectedInstrument]);
 
 
-    const onInput = (e) => {
-        const name = e.target.name;
-        const age = e.target.age;
+    const onInput = (formData) => {
+        console.log(formData)
+        const name = formData.name;
+        const age = formData.age;
         setInputName(name);
         setInputAge(age);
     }
