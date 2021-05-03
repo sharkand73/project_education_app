@@ -1,11 +1,23 @@
-import React from 'react';
-import Boxy_Hello from "./Boxy_Hello.png";
+import React, {useState} from 'react';
+import Boxy_Hello from "./Boxy_Andy_2.svg";
 import Logo from "./Logo.png";
 import "./Welcome.css";
 import '../App.css';
 
 
-const Welcome = () => {
+const Welcome = ({onInput}) => {
+
+    const [formData, setFormData] = useState({})
+
+    const onChange = (e) =>{
+        formData[e.target.id] = e.target.value;
+        setFormData(formData);
+    }
+
+    const handleFormSubmit = (event) => {
+        event.preventDefault()
+        onInput(formData)
+    }
 
     return (
         <>
@@ -20,6 +32,13 @@ const Welcome = () => {
                 <div id='welcome-grid-container'>
                 <h2 id='welcome-text-grid'>Welcome to Learning Box!</h2>
                 <img className='boxy-size' id ='welcome-boxy-grid' src={Boxy_Hello} alt=""/>
+                <form>
+                  <label htmlFor="name">Your Name: </label>
+                  <input type="text" id="name" name="name" onChange={onChange} placeholder="Enter your name here"></input>
+                  <label htmlFor="age">Your Age: </label>
+                  <input type="text" id="age" name="age" onChange={onChange} placeholder="Enter your age here"></input>
+                  <input type="submit" value="submit" onClick={handleFormSubmit}></input>
+                </form>
                 </div>
             </div>
         </div>

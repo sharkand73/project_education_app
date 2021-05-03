@@ -1,10 +1,18 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import Slide from './Slide.js';
 import QuizForm from './QuizForm.js';
+import LessonLanding from './LessonLanding.js';
 
-const Lesson = ({selectedInstrument, quizStarted, setQuizStarted, currentSlideIndex, setSlideIndex}) => {
+const Lesson = ({selectedInstrument, quizStarted, setQuizStarted, currentSlideIndex, setSlideIndex, inputName, inputAge}) => {
 
+    const [lessonStarted, setLessonStarted] = useState(false);
     const finalSlideIndex = selectedInstrument.slides.length - 1;
+
+    const startLesson = () => {
+        return(
+            setLessonStarted(true)
+        )
+    };
 
     const prev = () => {
         if (currentSlideIndex>0) {setSlideIndex(currentSlideIndex - 1)};
@@ -21,11 +29,12 @@ const Lesson = ({selectedInstrument, quizStarted, setQuizStarted, currentSlideIn
 
 
     return (
+        <div>
+        {lessonStarted ? 
         <>
         {quizStarted ? 
         <QuizForm selectedInstrument={selectedInstrument}/> : 
         <div>
-        <h3>{selectedInstrument.name} Lesson</h3>
         <Slide selectedInstrument={selectedInstrument} 
         currentSlideIndex={currentSlideIndex} 
         finalSlideIndex={finalSlideIndex}
@@ -34,7 +43,12 @@ const Lesson = ({selectedInstrument, quizStarted, setQuizStarted, currentSlideIn
         startQuiz={startQuiz}
         /> 
         </div>}
-        </>
+        </> : 
+        <LessonLanding inputName={inputName} 
+        startLesson={startLesson}
+        selectedInstrument={selectedInstrument}
+        />}
+        </div>
     )
 }
 
