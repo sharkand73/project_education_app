@@ -49,7 +49,7 @@
   grid-template-rows: repeat(24, 0.3fr);
   grid-column-gap: 1em;
   grid-row-gap: 2em;
-  height: 800px;
+  height: 900px;
 }
 
 /* WELCOME */
@@ -106,12 +106,7 @@
 
 
 
-
-
-
-
-
-
+/* OLD */
 /* ...................... */
 
 /* INSTRUMENT CONTAINER */

@@ -1,11 +1,10 @@
 .boxy-size{
-    width: 290px;
-    height: 270px;
+    width: 400px;
+    height: 420px;
     padding: 0px;
 }
 
 #logo-size{
-    /* float:left; */
     width: 180px;
     height: 170px;
     padding: 0px;
@@ -13,8 +12,9 @@
 
 .welcome-slide-border{
     border-style: solid;
-    border-color: rgb(235, 204, 82);
+    border-color: rgb(223, 179, 57);
     border-radius: 20px;
+    border-width: 8px;
     background-color: white;
     margin: 0px 30px; 
     padding: 20px 30px;
@@ -23,27 +23,27 @@
 #welcome-grid-container {
     display: grid;
     /* grid-template-columns: 70% 30%; */
-    grid-template-columns: repeat(10%);
+    grid-template-columns: repeat(6 2fr);
     /* grid-template-rows: 2fr 2fr 4fr 8fr; */
-    grid-template-rows: repeat(10%) ;
+    grid-template-rows: 25% 25% 50% ;
   }
   
-  #welcome-text-grid{
+#welcome-text-grid{
     grid-column-start:1;
     /* grid-column-end: 1; */
     grid-row-start: 1;
-    /* grid-row-end: span 2; */
+    grid-row-end: span 1;
     /* grid-column-start: 1; */
     /* grid-column-end: span col2-start; */
     /* grid-row-start: 1; */
     /* grid-row-end: span 1; */
   }
 
-  #welcome-boxy-grid{
-    grid-column-start: 7;
+#welcome-boxy-grid{
+    grid-column-start: 5;
     /* grid-column-end: 1; */
     grid-row-start: 1;
-    /* grid-row-end: span 2; */
+    grid-row-end: span 3;
     /* grid-column-start: 1; */
     /* grid-column-end: span col2-start; */
     /* grid-row-start: 1; */
@@ -51,4 +51,62 @@
     /* width: 370px;
     height: 350px;
     padding: 0px; */
+  }
+
+#form-grid{
+  grid-column-start:1;
+  /* grid-column-end: 8; */
+  grid-row-start: 3;
+  /* grid-row-end: span 2; */
+  /* grid-row-end: 2;
+  grid-column-start: 1; */
+  /* grid-column-end: span col2-start; */
+  /* grid-row-start: 1; */
+  /* grid-row-end: span 1; */
+}
+
+
+
+/* Positioning and appearance of fields and inputs within name/age form */
+
+#form-content-grid {
+  display: grid;
+  /* divide that grid using... */
+  grid-template-columns: 0.9fr 0.3fr;
+  /* the first column will have a fixed width of 200px 
+  whilst the second will take 0.3fr (“0.3 of a fraction”) 
+  of the remaining available space. */
+  grid-gap: 16px;
+}
+
+    /* now need to define the placement for our labels and inputs. 
+    To do that, we will use grid-column with specific values for 
+    the grid lines: */
+    
+label {
+  grid-column: 1 / 2;
+  text-align:right;
+  margin-top: 30px;
+  font-size: 20px;
+  font-weight: 800;
+  }
+  
+input{
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 2px solid black;
+  padding: 10px 30px;
+  }
+  
+.form-submit-button{
+    grid-column: 2 / 3;
+    border: none;
+    font-size: 30px;
+    font-weight: 900;
+    color: rgb(99, 174, 218);
+    background-color: white;
+    cursor: pointer;
+    margin: 10px 10px;
+    padding: 10px;
   }
