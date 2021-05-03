@@ -40,41 +40,68 @@
   }
 }
 
-/* INSTRUMENT CONTAINER
+/* INSTRUMENT CONTAINER */
 #grid-container {
-  display: grid | inline-grid;
+  display: grid;
   /* grid-template-columns: 70% 30%; */
-  /* grid-template-columns: 2fr 10fr 2fr;
-  grid-template-rows: 2fr 4fr 8fr;
-} */
+  grid-template-columns: 2fr 10fr 2fr;
+  /* grid-template-rows: 2fr 2fr 4fr 8fr; */
+  grid-template-rows: repeat(24, 0.3fr);
+}
 
 /* WELCOME */
-/* #icon-grid{
-  grid-column-start:6;
-  grid-column-end: 8;
+#icon-grid{
+  grid-column-start:1;
+  /* grid-column-end: 1; */
   grid-row-start: 1;
-  grid-row-end: 2;
+  grid-row-end: span 2;
+  /* grid-column-start: 1; */
+  /* grid-column-end: span col2-start; */
+  /* grid-row-start: 1; */
+  /* grid-row-end: span 1; */
+}
+
+/* WELCOME */
+#select-text-grid{
+  grid-column-start:2;
+  /* grid-column-end: 8; */
+  grid-row-start: 2;
+  grid-row-end: span 2;
+  /* grid-row-end: 2;
   grid-column-start: 1; */
   /* grid-column-end: span col2-start; */
   /* grid-row-start: 1; */
   /* grid-row-end: span 1; */
-/* } */
+}
 
 /* INSTRUMENT MENU */
-/* #menu-grid{
+#menu-grid{
   grid-column-start:2;
-
-  grid-row-start: 2; */
+  grid-column-end: span 1;
+  grid-row-start: 4;
 
   /* grid-column-start: 1;
   grid-column-end: span col2-start;
   grid-row-start: 2;
   grid-row-end: span 1; */
-/* } */
+}
+
+
+/* INSTRUMENT MENU */
+#menu-grid{
+  grid-column-start:2;
+  grid-column-end: span 1;
+  grid-row-start: 4;
+
+  /* grid-column-start: 1;
+  grid-column-end: span col2-start;
+  grid-row-start: 2;
+  grid-row-end: span 1; */
+}
 
 
 /* INSTRUMENT CONTAINER */
-#grid-container {
+/* #grid-container {
   display: grid;
   width: 100%;
   height: 250px;
@@ -84,10 +111,10 @@
   "main main";
   grid-template-rows:200px 200px 200px;
   grid-template-columns: 150px 150px;
-}
+} */
 
 /* ICON */
-#icon-grid{
+/* #icon-grid{
   grid-area: head;
 }
 
@@ -97,7 +124,7 @@
 
 #main-content{
   grid-area: main;
-}
+} */
 
 
 
