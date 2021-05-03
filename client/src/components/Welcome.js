@@ -3,7 +3,11 @@ import Boxy_Hello from "./Boxy_Hello.png";
 import Logo from "./Logo.png";
 import "./Welcome.css";
 
-const Welcome = () => {
+const Welcome = ({onInput}) => {
+
+    const handleFormSubmit = (event) => {
+        console.log(event)
+    }
 
     return (
         <div>
@@ -11,6 +15,13 @@ const Welcome = () => {
             <h1>Select a box to start a lesson</h1>
             <h2>Welcome to Learning Box!</h2>
             <img id='boxy-size' src={Boxy_Hello} alt=""/>
+            <form>
+                <label htmlFor="name">Your Name: </label>
+                <input type="text" id="name" name="name" defaultValue="Enter your name here"></input>
+                <label htmlFor="age">Your Age: </label>
+                <input type="text" id="age" name="age" defaultValue="Enter your age here"></input>
+                <input type="submit" value="submit" onClick={handleFormSubmit}></input>
+            </form>
         </div>
     )
 }

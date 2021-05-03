@@ -11,6 +11,8 @@ const InstrumentContainer = () => {
     const [selectedInstrument, setSelectedInstrument] = useState("");
     const [quizStarted, setQuizStarted] = useState(false);
     const [currentSlideIndex, setSlideIndex] = useState(0);
+    const [inputName, setInputName] = useState("");
+    const [inputAge, setInputAge] = useState("");
 
     useEffect(() => {
         getInstruments()
@@ -32,6 +34,14 @@ const InstrumentContainer = () => {
     //     console.log(`You have chosen ${selectedInstrument.name}`)
     //     }, [selectedInstrument]);
 
+
+    const onInput = (e) => {
+        const name = e.target.name;
+        const age = e.target.age;
+        setInputName(name);
+        setInputAge(age);
+    }
+
     return (
         <>
         <div>
@@ -44,7 +54,9 @@ const InstrumentContainer = () => {
             setQuizStarted={setQuizStarted} 
             currentSlideIndex={currentSlideIndex}
             setSlideIndex={setSlideIndex}
-            /> : <Welcome />}
+            inputName={inputName}
+            inputAge={inputAge}
+            /> : <Welcome onInput={onInput}/>}
         </div>
         </>
     )
