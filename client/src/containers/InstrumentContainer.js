@@ -3,6 +3,7 @@ import {getInstruments} from '../InstrumentsService.js'
 import InstrumentMenu from '../components/InstrumentMenu.js'
 import Lesson from '../components/Lesson.js'
 import Welcome from '../components/Welcome.js'
+//import audio from '../sounds/sax_0.mp3';
 
 
 const InstrumentContainer = () => {
@@ -11,6 +12,15 @@ const InstrumentContainer = () => {
     const [selectedInstrument, setSelectedInstrument] = useState("");
     const [quizStarted, setQuizStarted] = useState(false);
     const [currentSlideIndex, setSlideIndex] = useState(0);
+
+    function playAudio(index){
+        if (instrumentList != []){
+            let audioSrc = instrumentList[index].sounds[0];
+            let audio = require('../sounds/' + audioSrc).default;
+            let clip = new Audio(audio);
+            clip.play();
+        }
+    };
 
     useEffect(() => {
         getInstruments()
@@ -21,16 +31,11 @@ const InstrumentContainer = () => {
 
     const onClick = (e) => {
         const index = e.target.getAttribute("index");
-        //console.log(index);
-        //console.log(instrumentList[index].name);
         setSelectedInstrument(instrumentList[index]);
-        setQuizStarted(false)
+        setQuizStarted(false);
         setSlideIndex(0);
+        playAudio(index);
     };
-
-    // useEffect(() => {
-    //     console.log(`You have chosen ${selectedInstrument.name}`)
-    //     }, [selectedInstrument]);
 
     return (
         <>
