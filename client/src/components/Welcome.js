@@ -23,7 +23,7 @@ const Welcome = ({onInput, formSubmitted, setFormSubmitted}) => {
         line2.textContent = formData.name+'!';
         line3.textContent = "";
         onInput(formData);
-        setFormSubmitted(true)
+        setFormSubmitted(true);
     }
 
     return (
@@ -42,13 +42,28 @@ const Welcome = ({onInput, formSubmitted, setFormSubmitted}) => {
                 <h1 id='select-text-grid' className="grow" >Select a box to start a lesson...</h1>
                 // </div> 
                 :
-                <form id='form-grid'>
+                <form id='form-grid' onSubmit={handleFormSubmit}>
                   <div id='form-content-grid'>
                   <label htmlFor="name">Your Name: </label>
-                  <input type="text" id="name" name="name" onChange={onChange} placeholder="Enter your name here" className="input-field"></input>
+                  <input type="text" 
+                        id="name" 
+                        name="name" 
+                        onChange={onChange} 
+                        placeholder="Enter your name here" 
+                        className="input-field"
+                        required
+                        autofocus />
                   <label htmlFor="age">Your Age: </label>
-                  <input type="text" id="age" name="age" onChange={onChange} placeholder="Enter your age here" className="input-field"></input>
-                  <button type="submit" value="submit" onClick={handleFormSubmit} className="form-submit-button">Submit</button>
+                  <input type="text" 
+                        id="age" 
+                        name="age" 
+                        onChange={onChange} 
+                        placeholder="Enter your age here" 
+                        className="input-field" 
+                        maxLength="2" />
+                  <input type="submit" 
+                        value="Submit"  
+                        className="form-submit-button" />
                   </div>
                 </form>}
                 </div>
