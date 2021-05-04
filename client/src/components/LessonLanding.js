@@ -6,10 +6,10 @@ const LessonLanding = ({inputName, startLesson, selectedInstrument}) => {
     
     return(
         <div>
-        <h3>Hi {inputName? <span>{inputName}</span> : <span>there</span>}, 
-        welcome to the {selectedInstrument.name} Lesson!</h3>
-        <p>Click the button below when you are ready to start!</p>
-        <button type="button" onClick={startLesson}>Start Lesson</button>
+        <h2>Hi {inputName? <span>{inputName}</span> : <span>there</span>}, 
+        welcome to the {selectedInstrument.name} Lesson!</h2>
+        <h3>Click the button below when you are ready to start!</h3>
+        <button className="form-submit-button" type="button" onClick={startLesson}>Start Lesson</button>
         </div>
     )
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import '../App.css';
 import QuizQuestion from './QuizQuestion.js';
 function shuffleArray(array) {
     for (var i = array.length - 1; i > 0; i--) {
@@ -25,7 +26,7 @@ const QuizForm = ({selectedInstrument}) => {
 
     return(
         <>
-        <ul>
+        <ul className="question-text">
         {questionList}
         </ul>
         </>
