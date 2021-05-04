@@ -71,7 +71,7 @@ db.instruments.insertMany([
 // ELECTRIC GUITAR
     {name: "Electric Guitar",
     icon: "Electric_Guitar.png",
-    images: ['eGtr_0.jpg', 'eGtr_1.jpg', 'eGtr_2.jpg'],
+    images: ['eGtr_0.jpg', 'eGtr_1.png', 'eGtr_2.jpg'],
     sounds: ['eGtr_0.mp3','eGtr_1.mp3','eGtr_2.mp3','eGtr_3.mp3','eGtr_4.mp3','eGtr_5.mp3','eGtr_6.mp3'],
     //slides
     slides: [

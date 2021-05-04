@@ -25,10 +25,10 @@ const InstrumentMenu = ({instrumentList, onClick}) => {
     const instrumentsItems = instrumentList.map((instrument, index) => {
 
         return (
-        <>
-            <img className='instrument-select bounce' onClick={onClick} index={index} key={index} src={require('../icons/'+instrument.icon).default} alt="" />
+        <div key={index} >
+            <img className='instrument-select bounce' onClick={onClick} index={index} src={require('../icons/'+instrument.icon).default} alt="" />
             <p>{instrument.name}</p>
-        </>
+        </div>
         );
     })
 
@@ -36,12 +36,12 @@ const InstrumentMenu = ({instrumentList, onClick}) => {
         desktop: {
           breakpoint: { max: 3000, min: 1024 },
           items: 3,
-          slidesToSlide: 3 // optional, default to 1.
+          slidesToSlide: 1 // optional, default to 1.
         },
         tablet: {
           breakpoint: { max: 1024, min: 464 },
           items: 2,
-          slidesToSlide: 2 // optional, default to 1.
+          slidesToSlide: 1 // optional, default to 1.
         },
         mobile: {
           breakpoint: { max: 464, min: 0 },
