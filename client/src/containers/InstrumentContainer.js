@@ -41,6 +41,9 @@ const InstrumentContainer = () => {
         setQuizStarted(false);
         setLessonStarted(false);
         setSlideIndex(0);
+        let instrument = document.querySelector('#musical-instrument');
+        if (instrument) {instrument.textContent = ""};
+
         //playAudio(index);
     };
 

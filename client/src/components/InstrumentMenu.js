@@ -3,10 +3,10 @@ import Carousel from 'react-multi-carousel'
 import 'react-multi-carousel/lib/styles.css';
 //import "bootstrap/dist/css/bootstrap.css";
 //import "react-bootstrap-carousel/dist/react-bootstrap-carousel.css";
-import Trumpet from "./Trumpet.png";
-import Double_Bass from "./Double_Bass.png";
-import Electric_Guitar from "./Electric_Guitar.png";
-import Saxophone from "./Saxophone.png";
+import Trumpet from "../icons/Trumpet.png";
+import Double_Bass from "../icons/Double_Bass.png";
+import Electric_Guitar from "../icons/Electric_Guitar.png";
+import Saxophone from "../icons/Saxophone.png";
 import "./InstrumentMenu.css";
 import '../App.css';
 
