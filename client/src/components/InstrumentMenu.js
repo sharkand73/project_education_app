@@ -3,10 +3,10 @@ import Carousel from 'react-multi-carousel'
 import 'react-multi-carousel/lib/styles.css';
 //import "bootstrap/dist/css/bootstrap.css";
 //import "react-bootstrap-carousel/dist/react-bootstrap-carousel.css";
-import Trumpet from "../icons/Trumpet.png";
-import Double_Bass from "../icons/Double_Bass.png";
-import Electric_Guitar from "../icons/Electric_Guitar.png";
-import Saxophone from "../icons/Saxophone.png";
+//import Trumpet from "../icons/Trumpet.png";
+//import Double_Bass from "../icons/Double_Bass.png";
+//import Electric_Guitar from "../icons/Electric_Guitar.png";
+//import Saxophone from "../icons/Saxophone.png";
 import "./InstrumentMenu.css";
 import '../App.css';
 
@@ -20,13 +20,15 @@ const InstrumentMenu = ({instrumentList, onClick}) => {
     //     console.log(event.target.value);
     // }
 
-    const menu_images = {"Trumpet":Trumpet, "Double Bass":Double_Bass, "Electric Guitar":Electric_Guitar, "Saxophone":Saxophone}
+    //const menu_images = {"Trumpet":"Trumpet", "Double Bass":"Double_Bass", "Electric Guitar":"Electric_Guitar", "Saxophone":"Saxophone"}
 
     const instrumentsItems = instrumentList.map((instrument, index) => {
 
         return (
-        <img className='instrument-select bounce' onClick={onClick} index={index} key={index} src={menu_images[instrument.name]} alt="" />
-
+        <>
+            <img className='instrument-select bounce' onClick={onClick} index={index} key={index} src={require('../icons/'+instrument.icon).default} alt="" />
+            <p>{instrument.name}</p>
+        </>
         );
     })
 

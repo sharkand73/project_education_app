@@ -4,7 +4,7 @@ import InstrumentMenu from '../components/InstrumentMenu.js'
 import Lesson from '../components/Lesson.js'
 import Welcome from '../components/Welcome.js';
 import '../App.css';
-import Logo from "../components/Logo.png";
+import Logo from "../icons/Logo.png";
 
 
 const InstrumentContainer = () => {
@@ -18,6 +18,7 @@ const InstrumentContainer = () => {
     const [inputAge, setInputAge] = useState("");
     const [formSubmitted, setFormSubmitted] = useState(false);
     const [lessonStarted, setLessonStarted] = useState(false);
+    const [audioStarted, setAudioStarted] = useState(new Date('2021/01/01'));
 
     function playAudio(index){
         if (instrumentList !== []){
@@ -88,7 +89,9 @@ const InstrumentContainer = () => {
             lessonStarted={lessonStarted}
             setLessonStarted={setLessonStarted}
             returnClick={returnClick}
-            /> : <Welcome onInput={onInput} formSubmitted={formSubmitted} setFormSubmitted={setFormSubmitted}/>}
+            audioStarted={audioStarted} 
+            setAudioStarted={setAudioStarted}
+            /> : <Welcome onInput={onInput} formSubmitted={formSubmitted} setFormSubmitted={setFormSubmitted} />}
         </div>
         </>
     )
