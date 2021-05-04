@@ -29,7 +29,8 @@ const Lesson = ({selectedInstrument, quizStarted, setQuizStarted, currentSlideIn
 
 
     return (
-        <div>
+        <div id="welcome-slide-grid" >
+            <div className="welcome-slide-border">
         {lessonStarted ? 
         <>
         {quizStarted ? 
@@ -48,6 +49,7 @@ const Lesson = ({selectedInstrument, quizStarted, setQuizStarted, currentSlideIn
         startLesson={startLesson}
         selectedInstrument={selectedInstrument}
         />}
+        </div>
         </div>
     )
 }

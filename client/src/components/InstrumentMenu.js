@@ -49,13 +49,13 @@ const InstrumentMenu = ({instrumentList, onClick}) => {
       };
 
     return (
-        <Carousel id='instrument-menu'
+        <Carousel
         responsive={responsive} 
         additionalTransfrom={0}
         arrows
         autoPlaySpeed={3000}
         centerMode={false}
-        className=""
+        className="menu-grid"
         containerClass="container-with-dots"
         dotListClass=""
         draggable
