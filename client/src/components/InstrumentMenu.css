@@ -1,15 +1,32 @@
-#instrument-select{
+.instrument-select{
     width: 240px;
     height: 300px;
     margin: 0px 15px;
     padding: 0px;
     border-style: solid;
-    border-color: rgb(0,204,255);
+    border-color: rgb(99, 174, 218);
+    border-width: 8px;
     border-radius: 30px;
+    cursor: pointer;
 }
 
-#instrument-select:hover{
-    opacity: 50%;
+
+.bounce:hover {
+    animation-name: bounce;
+    animation-timing-function: ease;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    transform-origin: bottom;
 }
 
+
+@keyframes bounce {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-25px); }
+  100% { transform: translateY(0); }
+  from {border-color: rgb(0,204,255);
+    border-width: 8px;}
+    to {border-color: goldenrod;
+    border-width: 8px;}
+}
 

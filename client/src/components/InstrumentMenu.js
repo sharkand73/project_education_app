@@ -23,8 +23,10 @@ const InstrumentMenu = ({instrumentList, onClick}) => {
     const menu_images = {"Trumpet":Trumpet, "Double Bass":Double_Bass, "Electric Guitar":Electric_Guitar, "Saxophone":Saxophone}
 
     const instrumentsItems = instrumentList.map((instrument, index) => {
-        return (<img id='instrument-select' onClick={onClick} index={index} key={index} src={menu_images[instrument.name]} alt="" />
-        
+
+        return (
+        <img className='instrument-select bounce' onClick={onClick} index={index} key={index} src={menu_images[instrument.name]} alt="" />
+
         );
     })
 

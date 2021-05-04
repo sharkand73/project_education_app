@@ -34,19 +34,22 @@ const Welcome = ({onInput, formSubmitted, setFormSubmitted}) => {
         <div id='welcome-slide-grid'>
             <div className='welcome-slide-border'>
                 <div id='welcome-grid-container'>
-                <h2 id='welcome-text-grid'>Welcome to Learning Box!</h2>
-                <Boxy />
+                <h1 id='welcome-text-grid'>Welcome to Learning Box!</h1>
+                <Boxy className='boxy-size' id ='welcome-boxy-grid'/>
                 {/* <img className='boxy-size' id ='welcome-boxy-grid' src={Boxy_Hello} alt=""/> */}
                 {formSubmitted ? 
-                <div id='select-text-grid'>
-                    <h1>Select a box to start a lesson...</h1>
-                </div> :
-                <form>
+                // <div id='select-text-grid'>
+                <h1 id='select-text-grid' className="grow" >Select a box to start a lesson...</h1>
+                // </div> 
+                :
+                <form id='form-grid'>
+                  <div id='form-content-grid'>
                   <label htmlFor="name">Your Name: </label>
-                  <input type="text" id="name" name="name" onChange={onChange} placeholder="Enter your name here"></input>
+                  <input type="text" id="name" name="name" onChange={onChange} placeholder="Enter your name here" className="input-field"></input>
                   <label htmlFor="age">Your Age: </label>
-                  <input type="text" id="age" name="age" onChange={onChange} placeholder="Enter your age here"></input>
-                  <input type="submit" value="submit" onClick={handleFormSubmit}></input>
+                  <input type="text" id="age" name="age" onChange={onChange} placeholder="Enter your age here" className="input-field"></input>
+                  <button type="submit" value="submit" onClick={handleFormSubmit} className="form-submit-button">Submit</button>
+                  </div>
                 </form>}
                 </div>
             </div>
@@ -54,8 +57,6 @@ const Welcome = ({onInput, formSubmitted, setFormSubmitted}) => {
         </>
     )
 }
-
-
 
 
 export default Welcome
