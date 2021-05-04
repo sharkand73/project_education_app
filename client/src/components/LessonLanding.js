@@ -1,7 +1,7 @@
 import React from 'react';
 import {ReactComponent as BoxyMusic} from './Boxy_Music.svg';
 
-const LessonLanding = ({inputName, startLesson, selectedInstrument, audioStarted, setAudioStarted}) => {
+const LessonLanding = ({inputName, startLesson, selectedInstrument, audioEnd, setAudioEnd}) => {
     //   const setText = () => {  
     //     let line1 = document.querySelector('#line1');
     //     let line2 = document.querySelector('#line2');
@@ -12,14 +12,13 @@ const LessonLanding = ({inputName, startLesson, selectedInstrument, audioStarted
     //};
 
     function clickBoxy(){
-            const time_now = new Date();
-            if ((time_now - audioStarted) > 6000){
-                setAudioStarted(new Date());
+            if (Date.now() > audioEnd){
                 let numberOfSounds = selectedInstrument.sounds.length;
                 let choice = Math.floor(Math.random()*numberOfSounds);
                 let audioSrc = selectedInstrument.sounds[choice];
-                let audio = require('../sounds/' + audioSrc).default;
+                let audio = require('../sounds/' + audioSrc.audio).default;
                 let clip = new Audio(audio);
+                setAudioEnd(Date.now() + (audioSrc.duration*1000));
                 let instrument = document.querySelector('#musical-instrument');
                 instrument.textContent = selectedInstrument.name;
                 clip.play();

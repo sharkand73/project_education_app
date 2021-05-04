@@ -3,7 +3,7 @@ import Slide from './Slide.js';
 import QuizForm from './QuizForm.js';
 import LessonLanding from './LessonLanding.js';
 
-const Lesson = ({selectedInstrument, quizStarted, setQuizStarted, currentSlideIndex, setSlideIndex, inputName, inputAge, lessonStarted, setLessonStarted, returnClick, audioStarted, setAudioStarted}) => {
+const Lesson = ({selectedInstrument, quizStarted, setQuizStarted, currentSlideIndex, setSlideIndex, inputName, inputAge, lessonStarted, setLessonStarted, returnClick, audioEnd, setAudioEnd}) => {
 
     const finalSlideIndex = selectedInstrument.slides.length - 1;
 
@@ -47,8 +47,8 @@ const Lesson = ({selectedInstrument, quizStarted, setQuizStarted, currentSlideIn
         <LessonLanding inputName={inputName} 
         startLesson={startLesson}
         selectedInstrument={selectedInstrument}
-        audioStarted={audioStarted} 
-        setAudioStarted={setAudioStarted}
+        audioEnd={audioEnd} 
+        setAudioEnd={setAudioEnd}
         />}
         </div>
         </div>
