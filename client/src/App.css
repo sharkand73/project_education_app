@@ -54,7 +54,7 @@
   grid-template-rows: repeat(24, 0.3fr);
   grid-column-gap: 1em;
   grid-row-gap: 2em;
-  height: 900px;
+  height: 1300px;
 }
 
 /* WELCOME */
@@ -111,7 +111,46 @@
 }
 
 
+/* css for lesson slide & quiz */
 
+.lesson-text{
+  font-size: 25px;
+  font-weight: 400;
+}
+
+.question-text{
+  font-size: 30px;
+  font-weight: 900;
+}
+
+ul{
+ list-style: none;
+}
+
+.quiz-buttons{
+  font-size: 20px;
+  font-weight: 400;
+  border-style: solid;
+  border-color: rgb(99, 174, 218);
+  border-radius: 10px;
+  border-width: 4px;
+  background-color: white;
+  padding: 5px 15px;
+  margin: 30px 10px 30px 10px;
+  cursor: pointer;
+}
+
+.correct-color{
+  color: rgb(51, 163, 51);
+}
+
+.wrong-color{
+  color: red;
+}
+
+.question-padding{
+  padding: 20px 0px 10px 0px;
+}
 
 
 

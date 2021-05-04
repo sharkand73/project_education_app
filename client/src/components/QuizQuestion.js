@@ -1,4 +1,6 @@
 import React, {useState} from 'react';
+import '../App.css';
+
 // The following function will be used to shuffle the answers.
 
 const QuizQuestion = ({question, answersArray}) => {
@@ -17,15 +19,15 @@ const QuizQuestion = ({question, answersArray}) => {
     const answers = answersArray.map((answerInfo, index) => {
         // console.log(answerInfo.status.toString())
         return(  
-            <button key={index} value={answerInfo.status.toString()} onClick={handleAnswer}>{answerInfo.answer}</button>
+            <button className="quiz-buttons" key={index} value={answerInfo.status.toString()} onClick={handleAnswer}>{answerInfo.answer}</button>
         )
     })
 
     return (
         <>
-        <h5>{question}</h5>
+        <h3 className="question-padding">{question}</h3>
         {answers}
-        <p>{currentMessage}</p>
+        {currentMessage === "You are correct!" ? <p className = "correct-color">{currentMessage}</p> : <p className = "wrong-color">{currentMessage}</p>}
         </>
     )
 }

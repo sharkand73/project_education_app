@@ -20,11 +20,13 @@ const LessonLanding = ({inputName, startLesson, selectedInstrument}) => {
     
     return(
         <div>
+
         <h3>Hi {inputName? <span>{inputName}</span> : <span>there</span>}, 
         welcome to the {selectedInstrument.name} Lesson!</h3>
         <BoxyMusic onclick={playAudio}/>
         <p>Click the button below when you are ready to start!</p>
-        <button type="button" onClick={startLesson}>Start Lesson</button>
+        <button type="button" className="form-submit-button" onClick={startLesson}>Start Lesson</button>
+
         </div>
     )
 }
