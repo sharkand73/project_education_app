@@ -4,7 +4,7 @@ import InstrumentMenu from '../components/InstrumentMenu.js'
 import Lesson from '../components/Lesson.js'
 import Welcome from '../components/Welcome.js';
 import '../App.css';
-import Logo from "../components/Logo.png";
+import Logo from "../icons/Logo.png";
 
 
 const InstrumentContainer = () => {

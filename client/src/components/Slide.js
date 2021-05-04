@@ -12,7 +12,6 @@ const Slide = ({selectedInstrument, currentSlideIndex, finalSlideIndex, prev, ne
         )
     });
 
-
     return(
         <div>
             <div>
