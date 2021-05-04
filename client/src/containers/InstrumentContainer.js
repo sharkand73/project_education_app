@@ -20,15 +20,6 @@ const InstrumentContainer = () => {
     const [lessonStarted, setLessonStarted] = useState(false);
     const [audioStarted, setAudioStarted] = useState(new Date('2021/01/01'));
 
-    function playAudio(index){
-        if (instrumentList !== []){
-            let audioSrc = instrumentList[index].sounds[0];
-            let audio = require('../sounds/' + audioSrc).default;
-            let clip = new Audio(audio);
-            clip.play();
-        }
-    };
-
     useEffect(() => {
         getInstruments()
         .then((allInstruments) => {
@@ -44,8 +35,6 @@ const InstrumentContainer = () => {
         setSlideIndex(0);
         let instrument = document.querySelector('#musical-instrument');
         if (instrument) {instrument.textContent = ""};
-
-        //playAudio(index);
     };
 
     const onInput = (formData) => {
@@ -66,11 +55,11 @@ const InstrumentContainer = () => {
     }
 
     const returnClick = (e) => {
-    setSelectedInstrument("");
-    setQuizStarted(false);
-    setSlideIndex(0);
-    setLessonStarted(false);
-}
+        setSelectedInstrument("");
+        setQuizStarted(false);
+        setSlideIndex(0);
+        setLessonStarted(false);
+    }
 
     return (
         <>
@@ -97,7 +86,5 @@ const InstrumentContainer = () => {
     )
 
 }
-
-
 
 export default InstrumentContainer;

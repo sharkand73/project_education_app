@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-//import Boxy_Hello from "./Boxy_Andy_2.svg";
 import "./Welcome.css";
 import '../App.css';
 import {ReactComponent as Boxy} from './Boxy_Welcome.svg';
