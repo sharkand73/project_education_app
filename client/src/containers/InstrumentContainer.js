@@ -3,8 +3,8 @@ import {getInstruments} from '../InstrumentsService.js'
 import InstrumentMenu from '../components/InstrumentMenu.js'
 import Lesson from '../components/Lesson.js'
 import Welcome from '../components/Welcome.js'
-import '../App.css';
 //import audio from '../sounds/sax_0.mp3';
+import '../App.css';
 
 
 const InstrumentContainer = () => {
@@ -15,7 +15,7 @@ const InstrumentContainer = () => {
     const [currentSlideIndex, setSlideIndex] = useState(0);
     const [inputName, setInputName] = useState("");
     const [inputAge, setInputAge] = useState("");
-    const [formSubmitted, setFormSubmitted] = useState(false)
+    const [formSubmitted, setFormSubmitted] = useState(false);
 
     function playAudio(index){
         if (instrumentList !== []){
@@ -38,10 +38,8 @@ const InstrumentContainer = () => {
         setSelectedInstrument(instrumentList[index]);
         setQuizStarted(false);
         setSlideIndex(0);
-        playAudio(index);
+        //playAudio(index);
     };
-
-
 
     const onInput = (formData) => {
         const name = formData.name;
@@ -52,11 +50,10 @@ const InstrumentContainer = () => {
 
     return (
         <>
-        <div id="grid-container" >
-     
+        <div>
             <InstrumentMenu instrumentList={instrumentList} onClick={onClick} />
-       
-    
+        </div>
+        <div>
             {selectedInstrument ? 
             <Lesson selectedInstrument={selectedInstrument} 
             quizStarted={quizStarted} 
@@ -65,7 +62,7 @@ const InstrumentContainer = () => {
             setSlideIndex={setSlideIndex}
             inputName={inputName}
             inputAge={inputAge}
-            /> : <Welcome onInput={onInput} formSubmitted={formSubmitted} setFormSubmitted={setFormSubmitted} />}
+            /> : <Welcome onInput={onInput} formSubmitted={formSubmitted} setFormSubmitted={setFormSubmitted}/>}
         </div>
         </>
     )
