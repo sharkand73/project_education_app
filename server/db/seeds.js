@@ -7,7 +7,13 @@ db.instruments.insertMany([
     {name: "Trumpet",
     icon: "Trumpet.png",
     images: ['tpt_0.jpg', 'tpt_1.png', 'tpt_2.jpg'],
-    sounds: ['tpt_0.mp3','tpt_1.mp3','tpt_2.mp3','tpt_3.mp3','tpt_4.mp3','tpt_5.mp3','tpt_6.mp3'],
+    sounds: [{audio:'tpt_0.mp3',artist:'Miles Davis',title:'Blue In Green', duration:13},
+    {audio:'tpt_1.mp3',artist:'Buena Vista Social Club',title:'Dos Gardenias', duration:9},
+    {audio:'tpt_2.mp3',artist:'Tine Thing Helseth',title:'Hayden Trumpet Concerto in Eb', duration:6},
+    {audio:'tpt_3.mp3',artist:'Count Basie',title:'Flight Of The Foo Birds', duration:5},
+    {audio:'tpt_4.mp3',artist:'Louis Armstrong',title:'The Sunny Side Of The Street', duration:6},
+    {audio:'tpt_5.mp3',artist:'Herbie Hancock',title:'Cantaloupe Island', duration:5},
+    {audio:'tpt_6.mp3',artist:'Mariachi Nuevo Tecalitlan',title:'Mexican Hat Dance', duration:7}],
     //slides
     slides: [
     [
@@ -39,7 +45,12 @@ db.instruments.insertMany([
     {name: "Double Bass",
     icon: "Double_Bass.png",
     images: ['dBass_0.jpg', 'dBass_1.jpg', 'dBass_2.jpg'],
-    sounds: ['dBass_0.mp3','dBass_1.mp3','dBass_2.mp3','dBass_3.mp3','dBass_4.mp3','dBass_5.mp3'],
+    sounds: [{audio: 'dBass_0.mp3',artist:'John Pattitucci',title:'Backwoods', duration:13},
+    {audio: 'dBass_1.mp3',artist:'Miles Davis',title:'So What', duration:6},
+    {audio: 'dBass_2.mp3',artist:'Peggy Lee',title:'Fever', duration:6},
+    {audio: 'dBass_3.mp3',artist:'Edgar Meyer',title:'Bach Cello Suite in C minor', duration:5},
+    {audio: 'dBass_4.mp3',artist:'Camille Saint Saëns',title:'The Elephant', duration:7},
+    {audio: 'dBass_5.mp3',artist:'Charles Mingus',title:'Tension', duration:5}],
     //slides
     slides: [
     [
@@ -72,7 +83,13 @@ db.instruments.insertMany([
     {name: "Electric Guitar",
     icon: "Electric_Guitar.png",
     images: ['eGtr_0.jpg', 'eGtr_1.png', 'eGtr_2.jpg'],
-    sounds: ['eGtr_0.mp3','eGtr_1.mp3','eGtr_2.mp3','eGtr_3.mp3','eGtr_4.mp3','eGtr_5.mp3','eGtr_6.mp3'],
+    sounds: [{audio: 'eGtr_0.mp3',artist:'Chuck Berry',title:'Johnny B. Goode', duration:8},
+    {audio: 'eGtr_1.mp3',artist:'Eric Clapton',title:'Layla', duration:4},
+    {audio: 'eGtr_2.mp3',artist:'The Beatles',title:"Hard Day's Night", duration:3},
+    {audio: 'eGtr_3.mp3',artist:'Kenny Burrell',title:'Midnight Blue', duration:6},
+    {audio: 'eGtr_4.mp3',artist:'Michael Jackson',title:'Beat It', duration:7},
+    {audio: 'eGtr_5.mp3',artist:'Iron Maiden',title:'Phantom Of The Opera', duration:4},
+    {audio: 'eGtr_6.mp3',artist:'Allan Holdsworth',title:'City Nights', duration:6}],
     //slides
     slides: [
     [
@@ -106,7 +123,13 @@ db.instruments.insertMany([
     {name: "Saxophone",
     icon: "Saxophone.png",
     images: ['sax_0.png', 'sax_1.jpg', 'sax_2.jpg'],
-    sounds: ['sax_0.mp3','sax_1.mp3','sax_2.mp3','sax_3.mp3','sax_4.mp3','sax_5.mp3','sax_6.mp3'],
+    sounds: [{audio:'sax_0.mp3', artist:'Gerry Rafferty', title:'Baker Street', duration:8},
+    {audio:'sax_1.mp3', artist:'Wham', title:'Careless Whisper', duration:4},
+    {audio:'sax_2.mp3', artist:'Dire Straits', title:'Your Latest Trick', duration:9},
+    {audio:'sax_3.mp3', artist:'Henry Mancini', title:'The Pink Panther Theme', duration:8},
+    {audio:'sax_4.mp3', artist:'Lord Rockingham', title:'Hoots Mon', duration:5},
+    {audio:'sax_5.mp3', artist:'Madness', title:'One Step Beyond', duration:5},
+    {audio:'sax_6.mp3', artist:'Charlie Parker', title:'Lover Man', duration:6}],
  //slides
  slides: [
     [

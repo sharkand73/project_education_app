@@ -18,7 +18,7 @@ const InstrumentContainer = () => {
     const [inputAge, setInputAge] = useState("");
     const [formSubmitted, setFormSubmitted] = useState(false);
     const [lessonStarted, setLessonStarted] = useState(false);
-    const [audioStarted, setAudioStarted] = useState(new Date('2021/01/01'));
+    const [audioEnd, setAudioEnd] = useState(new Date('2021/01/01'));
 
     useEffect(() => {
         getInstruments()
@@ -78,8 +78,8 @@ const InstrumentContainer = () => {
             lessonStarted={lessonStarted}
             setLessonStarted={setLessonStarted}
             returnClick={returnClick}
-            audioStarted={audioStarted} 
-            setAudioStarted={setAudioStarted}
+            audioEnd={audioEnd} 
+            setAudioEnd={setAudioEnd}
             /> : <Welcome onInput={onInput} formSubmitted={formSubmitted} setFormSubmitted={setFormSubmitted} />}
         </div>
         </>
