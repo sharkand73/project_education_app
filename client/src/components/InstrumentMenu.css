@@ -1,6 +1,6 @@
 .instrument-select{
     width: 240px;
-    height: 220px;
+    height: 300px;
     margin: 0px 15px;
     padding: 0px;
     border-style: solid;
@@ -29,3 +29,4 @@
     to {border-color: goldenrod;
     border-width: 8px;}
 }
+
