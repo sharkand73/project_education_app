@@ -6,7 +6,7 @@ db.instruments.insertMany([
 // TRUMPET
     {name: "Trumpet",
     images: ['tpt_0.jpg', 'tpt_1.png', 'tpt_2.jpg'],
-    sounds: ['tpt_0.mp3'],
+    sounds: ['tpt_0.mp3','tpt_1.mp3','tpt_2.mp3','tpt_3.mp3','tpt_4.mp3','tpt_5.mp3','tpt_6.mp3'],
     //slides
     slides: [
     [
@@ -37,7 +37,7 @@ db.instruments.insertMany([
 // DOUBLE BASS
     {name: "Double Bass",
     images: ['tpt_0.jpg', 'tpt_1.png', 'tpt_2.jpg'],
-    sounds: ['dBass_0.mp3'],
+    sounds: ['dBass_0.mp3','dBass_1.mp3','dBass_2.mp3','dBass_3.mp3','dBass_4.mp3','dBass_5.mp3'],
     //slides
     slides: [
     [
@@ -69,7 +69,7 @@ db.instruments.insertMany([
 // ELECTRIC GUITAR
     {name: "Electric Guitar",
     images: ['tpt_0.jpg', 'tpt_1.png', 'tpt_2.jpg'],
-    sounds: ['eGtr_0.mp3'],
+    sounds: ['eGtr_0.mp3','eGtr_1.mp3','eGtr_2.mp3','eGtr_3.mp3','eGtr_4.mp3','eGtr_5.mp3','eGtr_6.mp3'],
     //slides
     slides: [
     [
@@ -102,7 +102,7 @@ db.instruments.insertMany([
 // SAXOPHONE
     {name: "Saxophone",
     images: ['sax_0.png', 'sax_1.jpg', 'sax_2.jpg'],
-    sounds: ['sax_0.mp3'],
+    sounds: ['sax_0.mp3','sax_1.mp3','sax_2.mp3','sax_3.mp3','sax_4.mp3','sax_5.mp3','sax_6.mp3'],
  //slides
  slides: [
     [
