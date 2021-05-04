@@ -69,6 +69,28 @@
   /* grid-row-end: span 1; */
 }
 
+#home-button{
+  grid-column-start:3;
+  grid-row-start: 1;
+  grid-row-end: span 1;
+  font-size: 20px;
+  font-weight: 400;
+  border-style: solid;
+  border-color: rgb(99, 174, 218);
+  border-radius: 10px;
+  border-width: 4px;
+  background-color: white;
+  padding: 5px 15px;
+  margin: 30px 10px 30px 10px;
+  cursor: pointer;
+}
+
+.logo-size{
+  width: 190px;
+  height: 170px;
+  padding: 0px;
+}
+
 /* WELCOME */
 #select-text-grid{
   grid-column-start:2;

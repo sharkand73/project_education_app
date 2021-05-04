@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 //import Boxy_Hello from "./Boxy_Andy_2.svg";
-import Logo from "./Logo.png";
 import "./Welcome.css";
 import '../App.css';
 import {ReactComponent as Boxy} from './Boxy_A.svg';
@@ -28,9 +27,6 @@ const Welcome = ({onInput, formSubmitted, setFormSubmitted}) => {
 
     return (
         <>
-        <div id='icon-grid'>
-            <img id='logo-size' src={Logo} alt=""/>
-        </div>
         <div id='welcome-slide-grid'>
             <div className='welcome-slide-border'>
                 <div id='welcome-grid-container'>

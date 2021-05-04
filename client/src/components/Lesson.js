@@ -3,9 +3,8 @@ import Slide from './Slide.js';
 import QuizForm from './QuizForm.js';
 import LessonLanding from './LessonLanding.js';
 
-const Lesson = ({selectedInstrument, quizStarted, setQuizStarted, currentSlideIndex, setSlideIndex, inputName, inputAge}) => {
+const Lesson = ({selectedInstrument, quizStarted, setQuizStarted, currentSlideIndex, setSlideIndex, inputName, inputAge, lessonStarted, setLessonStarted}) => {
 
-    const [lessonStarted, setLessonStarted] = useState(false);
     const finalSlideIndex = selectedInstrument.slides.length - 1;
 
     const startLesson = () => {

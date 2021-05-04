@@ -2,20 +2,22 @@ import React, {useState, useEffect} from 'react';
 import {getInstruments} from '../InstrumentsService.js'
 import InstrumentMenu from '../components/InstrumentMenu.js'
 import Lesson from '../components/Lesson.js'
-import Welcome from '../components/Welcome.js'
-//import audio from '../sounds/sax_0.mp3';
+import Welcome from '../components/Welcome.js';
 import '../App.css';
+import Logo from "../components/Logo.png";
 
 
 const InstrumentContainer = () => {
     
     const [instrumentList, setInstrumentList] = useState([]);
+
     const [selectedInstrument, setSelectedInstrument] = useState("");
     const [quizStarted, setQuizStarted] = useState(false);
     const [currentSlideIndex, setSlideIndex] = useState(0);
     const [inputName, setInputName] = useState("");
     const [inputAge, setInputAge] = useState("");
     const [formSubmitted, setFormSubmitted] = useState(false);
+    const [lessonStarted, setLessonStarted] = useState(false);
 
     function playAudio(index){
         if (instrumentList !== []){
@@ -37,6 +39,7 @@ const InstrumentContainer = () => {
         const index = e.target.getAttribute("index");
         setSelectedInstrument(instrumentList[index]);
         setQuizStarted(false);
+        setLessonStarted(false);
         setSlideIndex(0);
         //playAudio(index);
     };
@@ -48,12 +51,21 @@ const InstrumentContainer = () => {
         setInputAge(age);
     }
 
+    const homeClick = (e) => {
+        setSelectedInstrument("");
+        setQuizStarted(false);
+        setSlideIndex(0);
+        setInputName("");
+        setInputAge("");
+        setFormSubmitted(false);
+    }
+
     return (
         <>
-        <div>
+        <div id="grid-container">
+        <button id="home-button" onClick={homeClick}>Home</button>
+        <img className='logo-size' id='icon-grid' src={Logo} alt=""/>
             <InstrumentMenu instrumentList={instrumentList} onClick={onClick} />
-        </div>
-        <div>
             {selectedInstrument ? 
             <Lesson selectedInstrument={selectedInstrument} 
             quizStarted={quizStarted} 
@@ -62,6 +74,8 @@ const InstrumentContainer = () => {
             setSlideIndex={setSlideIndex}
             inputName={inputName}
             inputAge={inputAge}
+            lessonStarted={lessonStarted}
+            setLessonStarted={setLessonStarted}
             /> : <Welcome onInput={onInput} formSubmitted={formSubmitted} setFormSubmitted={setFormSubmitted}/>}
         </div>
         </>
