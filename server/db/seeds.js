@@ -16,8 +16,8 @@ db.instruments.insertMany([
     "There are many types, but the most common one is the B flat trumpet."
     ],
     [
-    "The trumpet has been used in royal ceremonies and in battle throught history, and can be traced at least as back far as 1500BC.",
-    "It even gets a mention or two in the bible.  It is said that an early version of the trumpet, the Shofar, was used to blow down the walls of Jericho."
+    "The trumpet has been used in royal ceremonies and in battle throught history, and can be traced at least as far back as 1500BC.",
+    "It even gets a mention or two in the Bible.  It is said that an early version of the trumpet, the Shofar, was used to blow down the walls of Jericho."
     ],
     [
     "Trumpeter Dizzy Gillespie was famous for his 'bent trumpet' and for blowing out his cheeks like a bullfrog when he played.",
@@ -31,7 +31,7 @@ db.instruments.insertMany([
     {question: "Which of these trumpeters would puff out their cheeks like a bullfrog?", 
     answers: [{answer: "Dizzy Gillespie", status: true}, {answer: "Miles Davis", status: false}, {answer: "Dizzy Rascal", status: false}, {answer: "Steve Davis", status: false}]},
     {question: "What is the most common type of trumpet?", 
-    answers: [{answer: "The B flat Trumpet", status: true}, {answer: "The Donald Trumpet", status: false}, {answer: "The Eb Trumpet", status: false}, {answer: "The Trombone", status: false}]}
+    answers: [{answer: "The B flat Trumpet", status: true}, {answer: "The Donald Trumpet", status: false}, {answer: "The E flat Trumpet", status: false}, {answer: "The Trombone", status: false}]}
     ]
     },
 
@@ -43,7 +43,7 @@ db.instruments.insertMany([
     //slides
     slides: [
     [
-    "The double bass is a wooden instrument with four strings. It looks like a giant violin!", 
+    "The double bass is a wooden instrument with four strings.  It looks like a giant violin!", 
     "It is used in a wide variety of musical styles, such as jazz, classical, rockabilly and folk music.", 
     "It is tuned low and so makes a very deep sound when played."
     ],
@@ -64,7 +64,7 @@ db.instruments.insertMany([
     {question: "What is the double bass made out of?", 
     answers: [{answer: "brass", status: false}, {answer: "wood", status: true}, {answer: "gold", status: false}, {answer: "plastic", status: false}]},
     {question: "How tall can a double bass be?", 
-    answers: [{answer: "100cm", status: false}, {answer: "190cm", status: true}, {answer: "20cm", status: false}, {answer: "5 meters", status: false}]}
+    answers: [{answer: "100cm", status: false}, {answer: "190cm", status: true}, {answer: "20cm", status: false}, {answer: "5 metres", status: false}]}
     ]
     },
     
@@ -76,13 +76,13 @@ db.instruments.insertMany([
     //slides
     slides: [
     [
-    "The electric guitar is a six stringed instrument which gets uses electricity to make sounds. It is usually made of wood and metal.", 
-    "It uses magnets called pick-ups on the body, when you strum the guitar strings the pick-up turns them into electrical signals.", 
+    "The electric guitar is a six stringed instrument which gets uses electricity to make sounds.  It is usually made of wood and metal.", 
+    "It uses magnets on the body called 'pick-ups'.  When you strum the guitar strings the pick-up turns them into electrical signals.", 
     "These electrical signals then go to an amplifier which makes the signal louder, and means you can play a guitar very loud!"
     ],
     [
     "The electric guitar was invented in 1932 by George Beauchamp and Adolph Rickenbacker.", 
-    "However it wasn't until the 1950s that cheaper, better sounding electric guitars became available. Most famously the Fender Telecaster, invented by Leo Fender.", 
+    "However it wasn't until the 1950s that cheaper, better sounding electric guitars became available, most famously the Fender Telecaster, invented by Leo Fender.", 
     "Electric guitars are played in nearly every kind of music you can think of, but they're most famous for their use in rock and blues music."
     ],
     [
