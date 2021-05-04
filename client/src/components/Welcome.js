@@ -48,7 +48,7 @@ const Welcome = ({onInput, formSubmitted, setFormSubmitted}) => {
                         placeholder="Enter your name here" 
                         className="input-field"
                         required
-                        autofocus />
+                        autoFocus />
                   <label htmlFor="age">Your Age: </label>
                   <input type="text" 
                         id="age" 
