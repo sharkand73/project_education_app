@@ -58,7 +58,15 @@ const InstrumentContainer = () => {
         setInputName("");
         setInputAge("");
         setFormSubmitted(false);
+        setLessonStarted(false);
     }
+
+    const returnClick = (e) => {
+    setSelectedInstrument("");
+    setQuizStarted(false);
+    setSlideIndex(0);
+    setLessonStarted(false);
+}
 
     return (
         <>
@@ -76,6 +84,7 @@ const InstrumentContainer = () => {
             inputAge={inputAge}
             lessonStarted={lessonStarted}
             setLessonStarted={setLessonStarted}
+            returnClick={returnClick}
             /> : <Welcome onInput={onInput} formSubmitted={formSubmitted} setFormSubmitted={setFormSubmitted}/>}
         </div>
         </>

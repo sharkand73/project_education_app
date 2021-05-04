@@ -10,7 +10,7 @@ function shuffleArray(array) {
     }
 }
 
-const QuizForm = ({selectedInstrument}) => {
+const QuizForm = ({selectedInstrument, returnClick}) => {
 
     const questionList = selectedInstrument.quiz.map((qa, index) => {
         let answersArray = qa.answers;
@@ -29,6 +29,7 @@ const QuizForm = ({selectedInstrument}) => {
         <ul className="question-text">
         {questionList}
         </ul>
+        <button className="form-submit-button" onClick={() => {returnClick()}} >Return to welcome page</button>
         </>
     )
 }
