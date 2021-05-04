@@ -54,19 +54,14 @@
   grid-template-rows: repeat(24, 0.3fr);
   grid-column-gap: 1em;
   grid-row-gap: 2em;
-  height: 1300px;
+  height: 2000px;
 }
 
 /* WELCOME */
 #icon-grid{
   grid-column-start:1;
-  /* grid-column-end: 1; */
   grid-row-start: 1;
-  grid-row-end: span 3;
-  /* grid-column-start: 1; */
-  /* grid-column-end: span col2-start; */
-  /* grid-row-start: 1; */
-  /* grid-row-end: span 1; */
+  grid-row-end: span 2;
 }
 
 #home-button{
@@ -91,6 +86,14 @@
   padding: 0px;
 }
 
+.instrument-pic{
+  width: 35%;
+  height: 45%;
+  padding-bottom: 20px;
+  border-radius: 10px 10px 10px 10px;
+  margin: 20px;
+}
+
 /* WELCOME */
 #select-text-grid{
   grid-column-start:2;
@@ -109,7 +112,7 @@
 #welcome-slide-grid{
   grid-column-start:2;
   /* grid-column-end: 8; */
-  grid-row-start: 10;
+  grid-row-start: 7;
   grid-row-end: span 2;
   /* grid-row-end: 2;
   grid-column-start: 1; */
@@ -123,7 +126,7 @@
 .menu-grid{
   grid-column-start:2;
   grid-column-end: span 1;
-  grid-row-start: 2;
+  grid-row-start: 1;
   grid-row-end: span 8;
 
   /* grid-column-start: 1;
@@ -146,7 +149,7 @@
 }
 
 ul{
- list-style: none;
+  list-style: none;
 }
 
 .quiz-buttons{

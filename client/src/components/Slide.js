@@ -16,7 +16,7 @@ const Slide = ({selectedInstrument, currentSlideIndex, finalSlideIndex, prev, ne
     return(
         <div>
             <div>
-            <img src={require('../images/'+ slideImage).default} alt='saxes' />
+            <img className="instrument-pic" src={require('../images/'+ slideImage).default} alt={selectedInstrument.name} />
             </div >
             <div className="lesson-text">
             {slideContent}

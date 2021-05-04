@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import Slide from './Slide.js';
 import QuizForm from './QuizForm.js';
 import LessonLanding from './LessonLanding.js';
