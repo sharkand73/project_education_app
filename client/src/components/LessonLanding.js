@@ -11,10 +11,14 @@ const LessonLanding = ({inputName, startLesson, selectedInstrument}) => {
     //     line3.textContent = selectedInstrument.name;
     //};
 
-    function playAudio(){
-            let audioSrc = selectedInstrument.sounds[0];
+    function clickBoxy(){
+            let numberOfSounds = selectedInstrument.sounds.length;
+            let choice = Math.floor(Math.random()*numberOfSounds);
+            let audioSrc = selectedInstrument.sounds[choice];
             let audio = require('../sounds/' + audioSrc).default;
             let clip = new Audio(audio);
+            let instrument = document.querySelector('#musical-instrument');
+            instrument.textContent = selectedInstrument.name;
             clip.play();
         };
     
@@ -23,7 +27,7 @@ const LessonLanding = ({inputName, startLesson, selectedInstrument}) => {
 
         <h3>Hi {inputName? <span>{inputName}</span> : <span>there</span>}, 
         welcome to the {selectedInstrument.name} Lesson!</h3>
-        <BoxyMusic onclick={playAudio}/>
+        <BoxyMusic className="boxy" onClick={clickBoxy}/>
         <p>Click the button below when you are ready to start!</p>
         <button type="button" className="form-submit-button" onClick={startLesson}>Start Lesson</button>
 
