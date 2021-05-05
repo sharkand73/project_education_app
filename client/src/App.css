@@ -1,17 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
+
 .App {
   text-align: center;
-
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  background-image: linear-gradient(rgb(79, 179, 8), rgb(211, 245, 90));
+  /* font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+  /* font-family: 'Nunito', sans-serif; */
+  font-family: 'Pangolin', cursive;
 }
 
 .App-header {
@@ -29,11 +24,140 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* INSTRUMENT CONTAINER */
+#grid-container {
+  display: grid;
+  /* grid-template-columns: 70% 30%; */
+  grid-template-columns: 0.5fr 10fr 1fr;
+  /* grid-template-rows: 2fr 2fr 4fr 8fr; */
+  grid-template-rows: repeat(24, 0.3fr);
+  grid-column-gap: 1em;
+  grid-row-gap: 2em;
+  height: 1200px;
 }
+
+/* WELCOME */
+#icon-grid{
+  grid-column-start:1;
+  grid-row-start: 1;
+  grid-row-end: span 2;
+}
+
+#home-button{
+  grid-column-start:3;
+  grid-row-start: 1;
+  grid-row-end: span 1;
+  font-size: 20px;
+  font-weight: 400;
+  border-style: solid;
+  border-color: rgb(99, 174, 218);
+  border-radius: 10px;
+  border-width: 4px;
+  background-color: white;
+  padding: 5px 15px;
+  margin: 30px 10px 30px 10px;
+  cursor: pointer;
+}
+
+.logo-size{
+  width: 190px;
+  height: 170px;
+  padding: 0px;
+}
+
+.instrument-pic{
+  width: 35%;
+  height: 45%;
+  padding-bottom: 20px;
+  border-radius: 10px 10px 10px 10px;
+  margin: 20px;
+}
+
+/* WELCOME */
+#select-text-grid{
+  grid-column-start:2;
+  /* grid-column-end: 8; */
+  grid-row-start: 2;
+  grid-row-end: span 2;
+  /* grid-row-end: 2;
+  grid-column-start: 1; */
+  /* grid-column-end: span col2-start; */
+  /* grid-row-start: 1; */
+  /* grid-row-end: span 1; */
+}
+
+
+/* WELCOME */
+#welcome-slide-grid{
+  grid-column-start:2;
+  /* grid-column-end: 8; */
+  grid-row-start: 4;
+  grid-row-end: span 3;
+  /* grid-row-end: 2;
+  grid-column-start: 1; */
+  /* grid-column-end: span col2-start; */
+  /* grid-row-start: 1; */
+  /* grid-row-end: span 1; */
+}
+
+
+/* INSTRUMENT MENU */
+.menu-grid{
+  grid-column-start:2;
+  grid-column-end: span 1;
+  grid-row-start: 1;
+  grid-row-end: span 4;
+  
+
+  /* grid-column-start: 1;
+  grid-column-end: span col2-start;
+  grid-row-start: 2;
+  grid-row-end: span 1; */
+}
+
+
+/* css for lesson slide & quiz */
+
+.lesson-text{
+  font-size: 25px;
+  font-weight: 400;
+}
+
+.question-text{
+  font-size: 30px;
+  font-weight: 900;
+}
+
+ul{
+  list-style: none;
+}
+
+.quiz-buttons{
+  font-size: 20px;
+  font-weight: 400;
+  border-style: solid;
+  border-color: rgb(99, 174, 218);
+  border-radius: 10px;
+  border-width: 4px;
+  background-color: white;
+  padding: 5px 15px;
+  margin: 30px 10px 30px 10px;
+  cursor: pointer;
+}
+
+.correct-color{
+  color: rgb(51, 163, 51);
+}
+
+.wrong-color{
+  color: red;
+}
+
+.question-padding{
+  padding: 20px 0px 10px 0px;
+}
+
+.boxy {
+  height: 420;
+}
+
